@@ -38,8 +38,8 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
 };
 
 @interface CYAlertController : UIViewController
-@property (nonatomic, strong)UIView *alertView;
-@property (nonatomic, strong)UIView *backgroundView;
+@property (nonnull, nonatomic, strong)UIView *alertView;
+@property (nonnull, nonatomic, strong)UIView *backgroundView;
 @property (nonatomic, assign)CYAlertPresentStyle presentStyle;
 @property (nonatomic, assign)CYAlertDismissStyle dismissStyle;
 
@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
  *    @param presentStyle present风格
  *    @param dismissStyle dismiss风格
  */
-+ (instancetype)alertWithCustomView:(UIView *)customView presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
++ (nonnull instancetype)alertWithCustomView:(nonnull UIView *)customView presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
 
 /**
  *    左右两个按钮，自定义style
@@ -65,7 +65,7 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
  *    @param presentStyle      present风格
  *    @param dismissStyle      dismiss风格
  */
-+ (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message leftButtonTitle:(NSString *)leftButtonTitle leftButtonAction:(EmptyBlock)leftButtonAction rightButtonTitle:(NSString *)rightButtonTitle rightButtonAction:(EmptyBlock)rightButtonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
++ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message leftButtonTitle:(nullable NSString *)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(nullable NSString *)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
 
 /**
  *    一个按钮，自定义style
@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
  *    @param presentStyle present风格
  *    @param dismissStyle dismiss风格
  */
-+ (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle buttonAction:(EmptyBlock)buttonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
++ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message buttonTitle:(nullable NSString *)buttonTitle buttonAction:(nullable EmptyBlock)buttonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
 
 /**
  *    两个按钮，默认style
@@ -89,7 +89,7 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
  *    @param rightButtonTitle  右边按钮标题
  *    @param rightButtonAction 右边按钮事件
  */
-+ (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message leftButtonTitle:(NSString *)leftButtonTitle leftButtonAction:(EmptyBlock)leftButtonAction rightButtonTitle:(NSString *)rightButtonTitle rightButtonAction:(EmptyBlock)rightButtonAction ;
++ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message leftButtonTitle:(nullable NSString *)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(nullable NSString *)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction ;
 
 
 /**
@@ -100,5 +100,5 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
  *    @param buttonTitle  按钮标题
  *    @param buttonAction 按钮事件
  */
-+ (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle buttonAction:(EmptyBlock)buttonAction ;
++ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message buttonTitle:(nullable NSString *)buttonTitle buttonAction:(nullable EmptyBlock)buttonAction ;
 @end

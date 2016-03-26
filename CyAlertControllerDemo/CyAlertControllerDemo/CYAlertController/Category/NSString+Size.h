@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NSString (Size)
-- (CGFloat)heightWithWidth:(CGFloat)width andFont:(UIFont *)font;
-- (CGFloat)widthWithHeight:(CGFloat)height andFont:(UIFont *)font;
+- (CGFloat)cy_heightWithWidth:(CGFloat)width andFont:(UIFont *)font;
+- (CGFloat)cy_widthWithHeight:(CGFloat)height andFont:(UIFont *)font;
 @end

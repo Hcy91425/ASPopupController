@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "CYAlertController/CYAlertController.h"
+#import "CYAlertController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong)NSArray *titleArray;
@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
     self.title = @"CYAlertControllerDemo";
     
     _titleArray = @[@"PresentSystem & DismissFadeOut",
@@ -55,7 +56,7 @@
                                                     buttonAction:^{
                                                         NSLog(@"done button clicked");
                                                     }];
-
+    
     switch (indexPath.row) {
         case 0:
             alert.presentStyle = CYAlertPresentStyleSystem;
