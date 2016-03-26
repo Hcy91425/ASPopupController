@@ -97,3 +97,5 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
     CYAlertDismissStyleSlideRight,          // 向右划出
 };
 ```
+
+项目中有 Demo 如果看不懂文字说明可以看 Demo
