@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27C6B1FC1CA6D4D600DA47B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B1FB1CA6D4D600DA47B3 /* main.m */; };
+		27C6B1FF1CA6D4D600DA47B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B1FE1CA6D4D600DA47B3 /* AppDelegate.m */; };
+		27C6B2021CA6D4D600DA47B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2011CA6D4D600DA47B3 /* ViewController.m */; };
+		27C6B2051CA6D4D600DA47B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C6B2031CA6D4D600DA47B3 /* Main.storyboard */; };
+		27C6B2071CA6D4D600DA47B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C6B2061CA6D4D600DA47B3 /* Assets.xcassets */; };
+		27C6B20A1CA6D4D600DA47B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C6B2081CA6D4D600DA47B3 /* LaunchScreen.storyboard */; };
+		27C6B23C1CA6D52B00DA47B3 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2141CA6D52B00DA47B3 /* NSString+Size.m */; };
+		27C6B23D1CA6D52B00DA47B3 /* CYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2161CA6D52B00DA47B3 /* CYAlertController.m */; };
+		27C6B23E1CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2191CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.m */; };
+		27C6B23F1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B21B1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.m */; };
+		27C6B2401CA6D52B00DA47B3 /* CYAlertDismissFadeOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B21D1CA6D52B00DA47B3 /* CYAlertDismissFadeOut.m */; };
+		27C6B2411CA6D52B00DA47B3 /* CYAlertDismissSlideDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B21F1CA6D52B00DA47B3 /* CYAlertDismissSlideDown.m */; };
+		27C6B2421CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2211CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.m */; };
+		27C6B2431CA6D52B00DA47B3 /* CYAlertDismissSlideRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2231CA6D52B00DA47B3 /* CYAlertDismissSlideRight.m */; };
+		27C6B2441CA6D52B00DA47B3 /* CYAlertDismissSlideUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2251CA6D52B00DA47B3 /* CYAlertDismissSlideUp.m */; };
+		27C6B2451CA6D52B00DA47B3 /* CYAlertPresentBounce.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2281CA6D52B00DA47B3 /* CYAlertPresentBounce.m */; };
+		27C6B2461CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B22A1CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.m */; };
+		27C6B2471CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B22C1CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.m */; };
+		27C6B2481CA6D52B00DA47B3 /* CYAlertPresentFadeIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B22E1CA6D52B00DA47B3 /* CYAlertPresentFadeIn.m */; };
+		27C6B2491CA6D52B00DA47B3 /* CYAlertPresentSlideDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2301CA6D52B00DA47B3 /* CYAlertPresentSlideDown.m */; };
+		27C6B24A1CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2321CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.m */; };
+		27C6B24B1CA6D52B00DA47B3 /* CYAlertPresentSlideRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2341CA6D52B00DA47B3 /* CYAlertPresentSlideRight.m */; };
+		27C6B24C1CA6D52B00DA47B3 /* CYAlertPresentSlideUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2361CA6D52B00DA47B3 /* CYAlertPresentSlideUp.m */; };
+		27C6B24D1CA6D52B00DA47B3 /* CYAlertPresentSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2381CA6D52B00DA47B3 /* CYAlertPresentSystem.m */; };
+		27C6B24E1CA6D52B00DA47B3 /* CYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B23B1CA6D52B00DA47B3 /* CYAlertView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27C6B1F71CA6D4D600DA47B3 /* CyAlertControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyAlertControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C6B1FB1CA6D4D600DA47B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27C6B1FD1CA6D4D600DA47B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27C6B1FE1CA6D4D600DA47B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		27C6B2001CA6D4D600DA47B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		27C6B2011CA6D4D600DA47B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		27C6B2041CA6D4D600DA47B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27C6B2061CA6D4D600DA47B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27C6B2091CA6D4D600DA47B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27C6B20B1CA6D4D600DA47B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27C6B2131CA6D52B00DA47B3 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		27C6B2141CA6D52B00DA47B3 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		27C6B2151CA6D52B00DA47B3 /* CYAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertController.h; sourceTree = "<group>"; };
+		27C6B2161CA6D52B00DA47B3 /* CYAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertController.m; sourceTree = "<group>"; };
+		27C6B2181CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissContractHorizontal.h; sourceTree = "<group>"; };
+		27C6B2191CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissContractHorizontal.m; sourceTree = "<group>"; };
+		27C6B21A1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissContractVertical.h; sourceTree = "<group>"; };
+		27C6B21B1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissContractVertical.m; sourceTree = "<group>"; };
+		27C6B21C1CA6D52B00DA47B3 /* CYAlertDismissFadeOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissFadeOut.h; sourceTree = "<group>"; };
+		27C6B21D1CA6D52B00DA47B3 /* CYAlertDismissFadeOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissFadeOut.m; sourceTree = "<group>"; };
+		27C6B21E1CA6D52B00DA47B3 /* CYAlertDismissSlideDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideDown.h; sourceTree = "<group>"; };
+		27C6B21F1CA6D52B00DA47B3 /* CYAlertDismissSlideDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideDown.m; sourceTree = "<group>"; };
+		27C6B2201CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideLeft.h; sourceTree = "<group>"; };
+		27C6B2211CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideLeft.m; sourceTree = "<group>"; };
+		27C6B2221CA6D52B00DA47B3 /* CYAlertDismissSlideRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideRight.h; sourceTree = "<group>"; };
+		27C6B2231CA6D52B00DA47B3 /* CYAlertDismissSlideRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideRight.m; sourceTree = "<group>"; };
+		27C6B2241CA6D52B00DA47B3 /* CYAlertDismissSlideUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideUp.h; sourceTree = "<group>"; };
+		27C6B2251CA6D52B00DA47B3 /* CYAlertDismissSlideUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideUp.m; sourceTree = "<group>"; };
+		27C6B2271CA6D52B00DA47B3 /* CYAlertPresentBounce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentBounce.h; sourceTree = "<group>"; };
+		27C6B2281CA6D52B00DA47B3 /* CYAlertPresentBounce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentBounce.m; sourceTree = "<group>"; };
+		27C6B2291CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentExpandHorizontal.h; sourceTree = "<group>"; };
+		27C6B22A1CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentExpandHorizontal.m; sourceTree = "<group>"; };
+		27C6B22B1CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentExpandVertical.h; sourceTree = "<group>"; };
+		27C6B22C1CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentExpandVertical.m; sourceTree = "<group>"; };
+		27C6B22D1CA6D52B00DA47B3 /* CYAlertPresentFadeIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentFadeIn.h; sourceTree = "<group>"; };
+		27C6B22E1CA6D52B00DA47B3 /* CYAlertPresentFadeIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentFadeIn.m; sourceTree = "<group>"; };
+		27C6B22F1CA6D52B00DA47B3 /* CYAlertPresentSlideDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideDown.h; sourceTree = "<group>"; };
+		27C6B2301CA6D52B00DA47B3 /* CYAlertPresentSlideDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideDown.m; sourceTree = "<group>"; };
+		27C6B2311CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideLeft.h; sourceTree = "<group>"; };
+		27C6B2321CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideLeft.m; sourceTree = "<group>"; };
+		27C6B2331CA6D52B00DA47B3 /* CYAlertPresentSlideRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideRight.h; sourceTree = "<group>"; };
+		27C6B2341CA6D52B00DA47B3 /* CYAlertPresentSlideRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideRight.m; sourceTree = "<group>"; };
+		27C6B2351CA6D52B00DA47B3 /* CYAlertPresentSlideUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideUp.h; sourceTree = "<group>"; };
+		27C6B2361CA6D52B00DA47B3 /* CYAlertPresentSlideUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideUp.m; sourceTree = "<group>"; };
+		27C6B2371CA6D52B00DA47B3 /* CYAlertPresentSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSystem.h; sourceTree = "<group>"; };
+		27C6B2381CA6D52B00DA47B3 /* CYAlertPresentSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSystem.m; sourceTree = "<group>"; };
+		27C6B23A1CA6D52B00DA47B3 /* CYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertView.h; sourceTree = "<group>"; };
+		27C6B23B1CA6D52B00DA47B3 /* CYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27C6B1F41CA6D4D600DA47B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27C6B1EE1CA6D4D600DA47B3 = {
+			isa = PBXGroup;
+			children = (
+				27C6B1F91CA6D4D600DA47B3 /* CyAlertControllerDemo */,
+				27C6B1F81CA6D4D600DA47B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27C6B1F81CA6D4D600DA47B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27C6B1F71CA6D4D600DA47B3 /* CyAlertControllerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27C6B1F91CA6D4D600DA47B3 /* CyAlertControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				27C6B2111CA6D52B00DA47B3 /* CYAlertController */,
+				27C6B2001CA6D4D600DA47B3 /* ViewController.h */,
+				27C6B2011CA6D4D600DA47B3 /* ViewController.m */,
+				27C6B1FA1CA6D4D600DA47B3 /* Supporting Files */,
+			);
+			path = CyAlertControllerDemo;
+			sourceTree = "<group>";
+		};
+		27C6B1FA1CA6D4D600DA47B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27C6B1FD1CA6D4D600DA47B3 /* AppDelegate.h */,
+				27C6B1FE1CA6D4D600DA47B3 /* AppDelegate.m */,
+				27C6B2031CA6D4D600DA47B3 /* Main.storyboard */,
+				27C6B2061CA6D4D600DA47B3 /* Assets.xcassets */,
+				27C6B2081CA6D4D600DA47B3 /* LaunchScreen.storyboard */,
+				27C6B20B1CA6D4D600DA47B3 /* Info.plist */,
+				27C6B1FB1CA6D4D600DA47B3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27C6B2111CA6D52B00DA47B3 /* CYAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				27C6B2151CA6D52B00DA47B3 /* CYAlertController.h */,
+				27C6B2161CA6D52B00DA47B3 /* CYAlertController.m */,
+				27C6B2171CA6D52B00DA47B3 /* CYAlertDismissAnimator */,
+				27C6B2261CA6D52B00DA47B3 /* CYAlertPresentAnimator */,
+				27C6B2391CA6D52B00DA47B3 /* CYAlertView */,
+				27C6B2121CA6D52B00DA47B3 /* Category */,
+			);
+			path = CYAlertController;
+			sourceTree = "<group>";
+		};
+		27C6B2121CA6D52B00DA47B3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				27C6B2131CA6D52B00DA47B3 /* NSString+Size.h */,
+				27C6B2141CA6D52B00DA47B3 /* NSString+Size.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		27C6B2171CA6D52B00DA47B3 /* CYAlertDismissAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				27C6B2181CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.h */,
+				27C6B2191CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.m */,
+				27C6B21A1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.h */,
+				27C6B21B1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.m */,
+				27C6B21C1CA6D52B00DA47B3 /* CYAlertDismissFadeOut.h */,
+				27C6B21D1CA6D52B00DA47B3 /* CYAlertDismissFadeOut.m */,
+				27C6B21E1CA6D52B00DA47B3 /* CYAlertDismissSlideDown.h */,
+				27C6B21F1CA6D52B00DA47B3 /* CYAlertDismissSlideDown.m */,
+				27C6B2201CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.h */,
+				27C6B2211CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.m */,
+				27C6B2221CA6D52B00DA47B3 /* CYAlertDismissSlideRight.h */,
+				27C6B2231CA6D52B00DA47B3 /* CYAlertDismissSlideRight.m */,
+				27C6B2241CA6D52B00DA47B3 /* CYAlertDismissSlideUp.h */,
+				27C6B2251CA6D52B00DA47B3 /* CYAlertDismissSlideUp.m */,
+			);
+			path = CYAlertDismissAnimator;
+			sourceTree = "<group>";
+		};
+		27C6B2261CA6D52B00DA47B3 /* CYAlertPresentAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				27C6B2271CA6D52B00DA47B3 /* CYAlertPresentBounce.h */,
+				27C6B2281CA6D52B00DA47B3 /* CYAlertPresentBounce.m */,
+				27C6B2291CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.h */,
+				27C6B22A1CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.m */,
+				27C6B22B1CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.h */,
+				27C6B22C1CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.m */,
+				27C6B22D1CA6D52B00DA47B3 /* CYAlertPresentFadeIn.h */,
+				27C6B22E1CA6D52B00DA47B3 /* CYAlertPresentFadeIn.m */,
+				27C6B22F1CA6D52B00DA47B3 /* CYAlertPresentSlideDown.h */,
+				27C6B2301CA6D52B00DA47B3 /* CYAlertPresentSlideDown.m */,
+				27C6B2311CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.h */,
+				27C6B2321CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.m */,
+				27C6B2331CA6D52B00DA47B3 /* CYAlertPresentSlideRight.h */,
+				27C6B2341CA6D52B00DA47B3 /* CYAlertPresentSlideRight.m */,
+				27C6B2351CA6D52B00DA47B3 /* CYAlertPresentSlideUp.h */,
+				27C6B2361CA6D52B00DA47B3 /* CYAlertPresentSlideUp.m */,
+				27C6B2371CA6D52B00DA47B3 /* CYAlertPresentSystem.h */,
+				27C6B2381CA6D52B00DA47B3 /* CYAlertPresentSystem.m */,
+			);
+			path = CYAlertPresentAnimator;
+			sourceTree = "<group>";
+		};
+		27C6B2391CA6D52B00DA47B3 /* CYAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				27C6B23A1CA6D52B00DA47B3 /* CYAlertView.h */,
+				27C6B23B1CA6D52B00DA47B3 /* CYAlertView.m */,
+			);
+			path = CYAlertView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27C6B1F61CA6D4D600DA47B3 /* CyAlertControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C6B20E1CA6D4D600DA47B3 /* Build configuration list for PBXNativeTarget "CyAlertControllerDemo" */;
+			buildPhases = (
+				27C6B1F31CA6D4D600DA47B3 /* Sources */,
+				27C6B1F41CA6D4D600DA47B3 /* Frameworks */,
+				27C6B1F51CA6D4D600DA47B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CyAlertControllerDemo;
+			productName = CyAlertControllerDemo;
+			productReference = 27C6B1F71CA6D4D600DA47B3 /* CyAlertControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27C6B1EF1CA6D4D600DA47B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Cyrus;
+				TargetAttributes = {
+					27C6B1F61CA6D4D600DA47B3 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5H493MJ8BH;
+					};
+				};
+			};
+			buildConfigurationList = 27C6B1F21CA6D4D600DA47B3 /* Build configuration list for PBXProject "CyAlertControllerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27C6B1EE1CA6D4D600DA47B3;
+			productRefGroup = 27C6B1F81CA6D4D600DA47B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27C6B1F61CA6D4D600DA47B3 /* CyAlertControllerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27C6B1F51CA6D4D600DA47B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C6B20A1CA6D4D600DA47B3 /* LaunchScreen.storyboard in Resources */,
+				27C6B2071CA6D4D600DA47B3 /* Assets.xcassets in Resources */,
+				27C6B2051CA6D4D600DA47B3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27C6B1F31CA6D4D600DA47B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C6B23C1CA6D52B00DA47B3 /* NSString+Size.m in Sources */,
+				27C6B24D1CA6D52B00DA47B3 /* CYAlertPresentSystem.m in Sources */,
+				27C6B24C1CA6D52B00DA47B3 /* CYAlertPresentSlideUp.m in Sources */,
+				27C6B23E1CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.m in Sources */,
+				27C6B2401CA6D52B00DA47B3 /* CYAlertDismissFadeOut.m in Sources */,
+				27C6B2451CA6D52B00DA47B3 /* CYAlertPresentBounce.m in Sources */,
+				27C6B2021CA6D4D600DA47B3 /* ViewController.m in Sources */,
+				27C6B2491CA6D52B00DA47B3 /* CYAlertPresentSlideDown.m in Sources */,
+				27C6B1FF1CA6D4D600DA47B3 /* AppDelegate.m in Sources */,
+				27C6B2411CA6D52B00DA47B3 /* CYAlertDismissSlideDown.m in Sources */,
+				27C6B2431CA6D52B00DA47B3 /* CYAlertDismissSlideRight.m in Sources */,
+				27C6B2421CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.m in Sources */,
+				27C6B2441CA6D52B00DA47B3 /* CYAlertDismissSlideUp.m in Sources */,
+				27C6B24A1CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.m in Sources */,
+				27C6B2471CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.m in Sources */,
+				27C6B23F1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.m in Sources */,
+				27C6B24B1CA6D52B00DA47B3 /* CYAlertPresentSlideRight.m in Sources */,
+				27C6B1FC1CA6D4D600DA47B3 /* main.m in Sources */,
+				27C6B2481CA6D52B00DA47B3 /* CYAlertPresentFadeIn.m in Sources */,
+				27C6B24E1CA6D52B00DA47B3 /* CYAlertView.m in Sources */,
+				27C6B2461CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.m in Sources */,
+				27C6B23D1CA6D52B00DA47B3 /* CYAlertController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		27C6B2031CA6D4D600DA47B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27C6B2041CA6D4D600DA47B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27C6B2081CA6D4D600DA47B3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27C6B2091CA6D4D600DA47B3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27C6B20C1CA6D4D600DA47B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27C6B20D1CA6D4D600DA47B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27C6B20F1CA6D4D600DA47B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CyAlertControllerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyrusdev.CyAlertControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		27C6B2101CA6D4D600DA47B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CyAlertControllerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyrusdev.CyAlertControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27C6B1F21CA6D4D600DA47B3 /* Build configuration list for PBXProject "CyAlertControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C6B20C1CA6D4D600DA47B3 /* Debug */,
+				27C6B20D1CA6D4D600DA47B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27C6B20E1CA6D4D600DA47B3 /* Build configuration list for PBXNativeTarget "CyAlertControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C6B20F1CA6D4D600DA47B3 /* Debug */,
+				27C6B2101CA6D4D600DA47B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27C6B1EF1CA6D4D600DA47B3 /* Project object */;
+}
