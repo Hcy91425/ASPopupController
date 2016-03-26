@@ -2,7 +2,9 @@
 ***
 我的第一个轮子，自定义 AlertController，提供多种转场动画。先看Demo：
 
-<div align="center"><img src="http://7xrpns.com1.z0.glb.clouddn.com/alert.gif"></div>
+<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert_1.gif" width = 250>
+<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert_2.gif" width = 250>
+
 
 ***
 ### 使用
