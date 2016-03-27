@@ -61,16 +61,17 @@
         messageLabel.numberOfLines = 0;
         messageLabel.font = [UIFont systemFontOfSize:13];
         
-        // add s
+        // add subView
         [mainScrollView addSubview:titleLabel];
         [mainScrollView addSubview:messageLabel];
         [self addSubview:mainScrollView];
         
         // 横线
         CGFloat y = _totalHeight < 450 ? _totalHeight-_buttonHeight : 450-_buttonHeight;
-        UIView *horizontalLineView = [[UIView alloc] initWithFrame:CGRectMake(0, y, self.frame.size.width, 0.4)];
-        horizontalLineView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
-        [self addSubview:horizontalLineView];
+        CALayer *horizontalLineLayer = [[CALayer alloc] init];
+        horizontalLineLayer.frame = CGRectMake(0, y, self.frame.size.width, 0.4);
+        horizontalLineLayer.backgroundColor = [[UIColor colorWithWhite:0.85 alpha:1] CGColor];
+        [self.layer addSublayer:horizontalLineLayer];
     }
     return self;
 }
@@ -101,12 +102,13 @@
         [rightButton addTarget:self action:@selector(didClickRightButton) forControlEvents:UIControlEventTouchUpInside];
         
         // 初始化竖线
-        UIView *vertalLineView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width/2.0, y, 0.4, _buttonHeight)];
-        vertalLineView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
+        CALayer *verticalLineLayer = [[CALayer alloc] init];
+        verticalLineLayer.frame = CGRectMake(self.frame.size.width/2.0, y, 0.4, _buttonHeight);
+        verticalLineLayer.backgroundColor = [[UIColor colorWithWhite:0.85 alpha:1] CGColor];
         
         [self addSubview:leftButton];
         [self addSubview:rightButton];
-        [self addSubview:vertalLineView];
+        [self.layer addSublayer:verticalLineLayer];
         
     } else if (leftButtonTitle && !rightButtonTitle) {  // 如果左边的buttonTitle不为空
         
