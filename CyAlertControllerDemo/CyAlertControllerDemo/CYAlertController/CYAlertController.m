@@ -67,7 +67,7 @@
 #pragma mark - 类方法返回实例
 
 // 自定义弹出的view
-+ (nonnull instancetype)alertWithCustomView:(nonnull UIView *)customView presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle{
++ (_Nonnull instancetype)alertWithCustomView:(nonnull UIView *)customView presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle{
     CYAlertController *alertController = [[CYAlertController alloc] init];
     alertController.presentStyle = presentStyle;
     alertController.dismissStyle = dismissStyle;
@@ -76,7 +76,7 @@
 }
 
 // 完整的初始化方法，供其他初始化方法调用
-+ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message leftButtonTitle:(nullable NSString *)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(nullable NSString *)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle {
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message leftButtonTitle:(NSString * _Nullable)leftButtonTitle leftButtonAction:(EmptyBlock)leftButtonAction rightButtonTitle:(NSString * _Nullable)rightButtonTitle rightButtonAction:(EmptyBlock)rightButtonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle {
     
     CYAlertController *alertController = [[CYAlertController alloc] init];
     alertController.presentStyle = presentStyle;
@@ -98,21 +98,21 @@
     
 }
 
-+ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message leftButtonTitle:(nullable NSString *)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(nullable NSString *)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction {
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message leftButtonTitle:(NSString * _Nullable)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(NSString * _Nullable)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction {
     
     CYAlertController *alertController = [self alertWithTitle:title message:message leftButtonTitle:leftButtonTitle leftButtonAction:leftButtonAction rightButtonTitle:rightButtonTitle rightButtonAction:rightButtonAction presentStyle:CYAlertPresentStyleSystem dismissStyle:CYAlertDismissStyleFadeOut];
 
     return alertController;
 }
 
-+ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message buttonTitle:(nullable NSString *)buttonTitle buttonAction:(nullable EmptyBlock)buttonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle {
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonTitle:(NSString * _Nullable)buttonTitle buttonAction:(EmptyBlock)buttonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle {
     
     CYAlertController *alertController = [self alertWithTitle:title message:message leftButtonTitle:buttonTitle leftButtonAction:buttonAction rightButtonTitle:nil rightButtonAction:nil presentStyle:presentStyle dismissStyle:dismissStyle];
     
     return alertController;
 }
 
-+ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message buttonTitle:(nullable NSString *)buttonTitle buttonAction:(nullable EmptyBlock)buttonAction {
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonTitle:(NSString * _Nullable)buttonTitle buttonAction:(EmptyBlock)buttonAction {
     
     CYAlertController *alertController = [self alertWithTitle:title message:message leftButtonTitle:buttonTitle leftButtonAction:buttonAction rightButtonTitle:nil rightButtonAction:nil presentStyle:CYAlertPresentStyleSystem dismissStyle:CYAlertDismissStyleFadeOut];
     
