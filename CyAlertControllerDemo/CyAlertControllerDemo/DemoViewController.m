@@ -6,14 +6,14 @@
 //  Copyright © 2016年 Cyrus. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DemoViewController.h"
 #import "CYAlertController.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface DemoViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong)NSArray *titleArray;
 @end
 
-@implementation ViewController
+@implementation DemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -92,10 +92,17 @@
             alert.dismissStyle = CYAlertDismissStyleSlideRight;
             break;
         case 9:{
+            // 自定义view
             UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 270, 400)];
-            customView.backgroundColor = [UIColor brownColor];
+            customView.backgroundColor = [UIColor whiteColor];
+            customView.layer.shadowColor = [UIColor blackColor].CGColor;
+            customView.layer.shadowOffset = CGSizeMake(1, 1);
+            customView.layer.shadowRadius = 5;
+            customView.layer.shadowOpacity = 0.7;
+            customView.layer.shadowPath = [UIBezierPath bezierPathWithRect:customView.bounds].CGPath;
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
             [customView addGestureRecognizer:tap];
+            // 调用自定义view的方法
             alert = [CYAlertController alertWithCustomView:customView presentStyle:CYAlertPresentStyleBounce dismissStyle:CYAlertDismissStyleFadeOut];
             break;
         }

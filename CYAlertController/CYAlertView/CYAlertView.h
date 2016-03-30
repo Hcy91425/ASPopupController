@@ -11,5 +11,5 @@
 typedef void (^EmptyBlock) ();
 
 @interface CYAlertView : UIView
-- (nonnull instancetype)initWithTitle:(nullable NSString *)title message:(nullable NSString *)message leftButtonTitle:(nullable NSString *)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(nullable NSString *)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction;
+- (_Nonnull instancetype)initWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message leftButtonTitle:(NSString * _Nullable)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(NSString * _Nullable)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction;
 @end

@@ -20,7 +20,7 @@
     CGFloat _buttonHeight;
 }
 
-- (nonnull instancetype)initWithTitle:(nullable NSString *)title message:(nullable NSString *)message {
+- (_Nonnull instancetype)initWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message {
     CGFloat titleHeight = [title cy_heightWithWidth:230 andFont:[UIFont systemFontOfSize:17]];
     CGFloat messageHeight = [message cy_heightWithWidth:230 andFont:[UIFont systemFontOfSize:13]];
     CGFloat edge = 20;                      // 边缘距离
@@ -76,7 +76,7 @@
     return self;
 }
 
-- (nonnull instancetype)initWithTitle:(nullable NSString *)title message:(nullable NSString *)message leftButtonTitle:(nullable NSString *)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(nullable NSString *)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction {
+- (_Nonnull instancetype)initWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message leftButtonTitle:(NSString * _Nullable)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(NSString * _Nullable)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction {
     
     self = [self initWithTitle:title message:message];
     // 保存两个block

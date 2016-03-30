@@ -7,7 +7,9 @@
 //
 
 #import "CYAlertController.h"
+#import "CYAlertView.h"
 
+// Present
 #import "CYAlertPresentSystem.h"
 #import "CYAlertPresentFadeIn.h"
 #import "CYAlertPresentBounce.h"
@@ -18,7 +20,7 @@
 #import "CYAlertPresentSlideLeft.h"
 #import "CYAlertPresentSlideRight.h"
 
-
+// Dismiss
 #import "CYAlertDismissFadeOut.h"
 #import "CYAlertDismissContractHorizontal.h"
 #import "CYAlertDismissContractVertical.h"
@@ -27,10 +29,6 @@
 #import "CYAlertDismissSlideLeft.h"
 #import "CYAlertDismissSlideRight.h"
 
-
-
-
-#import "CYAlertView.h"
 
 @interface CYAlertController ()<UIViewControllerTransitioningDelegate>
 
@@ -121,6 +119,7 @@
 
 #pragma mark - UIViewControllerTransitioningDelegate
 
+// 返回Present动画
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     switch (_presentStyle) {
         case CYAlertPresentStyleFadeIn:
@@ -152,6 +151,7 @@
     }
 }
 
+// 返回Dismiss动画
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     switch (_dismissStyle) {
         case CYAlertDismissStyleContractHorizontal:

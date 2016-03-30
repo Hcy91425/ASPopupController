@@ -7,82 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		274B66331CAC0C3E00C26B89 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B660B1CAC0C3E00C26B89 /* NSString+Size.m */; };
+		274B66341CAC0C3E00C26B89 /* CYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B660D1CAC0C3E00C26B89 /* CYAlertController.m */; };
+		274B66351CAC0C3E00C26B89 /* CYAlertDismissContractHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66101CAC0C3E00C26B89 /* CYAlertDismissContractHorizontal.m */; };
+		274B66361CAC0C3E00C26B89 /* CYAlertDismissContractVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66121CAC0C3E00C26B89 /* CYAlertDismissContractVertical.m */; };
+		274B66371CAC0C3E00C26B89 /* CYAlertDismissFadeOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66141CAC0C3E00C26B89 /* CYAlertDismissFadeOut.m */; };
+		274B66381CAC0C3E00C26B89 /* CYAlertDismissSlideDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66161CAC0C3E00C26B89 /* CYAlertDismissSlideDown.m */; };
+		274B66391CAC0C3E00C26B89 /* CYAlertDismissSlideLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66181CAC0C3E00C26B89 /* CYAlertDismissSlideLeft.m */; };
+		274B663A1CAC0C3E00C26B89 /* CYAlertDismissSlideRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B661A1CAC0C3E00C26B89 /* CYAlertDismissSlideRight.m */; };
+		274B663B1CAC0C3E00C26B89 /* CYAlertDismissSlideUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B661C1CAC0C3E00C26B89 /* CYAlertDismissSlideUp.m */; };
+		274B663C1CAC0C3E00C26B89 /* CYAlertPresentBounce.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B661F1CAC0C3E00C26B89 /* CYAlertPresentBounce.m */; };
+		274B663D1CAC0C3E00C26B89 /* CYAlertPresentExpandHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66211CAC0C3E00C26B89 /* CYAlertPresentExpandHorizontal.m */; };
+		274B663E1CAC0C3E00C26B89 /* CYAlertPresentExpandVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66231CAC0C3E00C26B89 /* CYAlertPresentExpandVertical.m */; };
+		274B663F1CAC0C3E00C26B89 /* CYAlertPresentFadeIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66251CAC0C3E00C26B89 /* CYAlertPresentFadeIn.m */; };
+		274B66401CAC0C3E00C26B89 /* CYAlertPresentSlideDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66271CAC0C3E00C26B89 /* CYAlertPresentSlideDown.m */; };
+		274B66411CAC0C3E00C26B89 /* CYAlertPresentSlideLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66291CAC0C3E00C26B89 /* CYAlertPresentSlideLeft.m */; };
+		274B66421CAC0C3E00C26B89 /* CYAlertPresentSlideRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B662B1CAC0C3E00C26B89 /* CYAlertPresentSlideRight.m */; };
+		274B66431CAC0C3E00C26B89 /* CYAlertPresentSlideUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B662D1CAC0C3E00C26B89 /* CYAlertPresentSlideUp.m */; };
+		274B66441CAC0C3E00C26B89 /* CYAlertPresentSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B662F1CAC0C3E00C26B89 /* CYAlertPresentSystem.m */; };
+		274B66451CAC0C3E00C26B89 /* CYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B66321CAC0C3E00C26B89 /* CYAlertView.m */; };
 		27C6B1FC1CA6D4D600DA47B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B1FB1CA6D4D600DA47B3 /* main.m */; };
 		27C6B1FF1CA6D4D600DA47B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B1FE1CA6D4D600DA47B3 /* AppDelegate.m */; };
-		27C6B2021CA6D4D600DA47B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2011CA6D4D600DA47B3 /* ViewController.m */; };
+		27C6B2021CA6D4D600DA47B3 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2011CA6D4D600DA47B3 /* DemoViewController.m */; };
 		27C6B2051CA6D4D600DA47B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C6B2031CA6D4D600DA47B3 /* Main.storyboard */; };
 		27C6B2071CA6D4D600DA47B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C6B2061CA6D4D600DA47B3 /* Assets.xcassets */; };
 		27C6B20A1CA6D4D600DA47B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C6B2081CA6D4D600DA47B3 /* LaunchScreen.storyboard */; };
-		27C6B23C1CA6D52B00DA47B3 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2141CA6D52B00DA47B3 /* NSString+Size.m */; };
-		27C6B23D1CA6D52B00DA47B3 /* CYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2161CA6D52B00DA47B3 /* CYAlertController.m */; };
-		27C6B23E1CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2191CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.m */; };
-		27C6B23F1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B21B1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.m */; };
-		27C6B2401CA6D52B00DA47B3 /* CYAlertDismissFadeOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B21D1CA6D52B00DA47B3 /* CYAlertDismissFadeOut.m */; };
-		27C6B2411CA6D52B00DA47B3 /* CYAlertDismissSlideDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B21F1CA6D52B00DA47B3 /* CYAlertDismissSlideDown.m */; };
-		27C6B2421CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2211CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.m */; };
-		27C6B2431CA6D52B00DA47B3 /* CYAlertDismissSlideRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2231CA6D52B00DA47B3 /* CYAlertDismissSlideRight.m */; };
-		27C6B2441CA6D52B00DA47B3 /* CYAlertDismissSlideUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2251CA6D52B00DA47B3 /* CYAlertDismissSlideUp.m */; };
-		27C6B2451CA6D52B00DA47B3 /* CYAlertPresentBounce.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2281CA6D52B00DA47B3 /* CYAlertPresentBounce.m */; };
-		27C6B2461CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B22A1CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.m */; };
-		27C6B2471CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B22C1CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.m */; };
-		27C6B2481CA6D52B00DA47B3 /* CYAlertPresentFadeIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B22E1CA6D52B00DA47B3 /* CYAlertPresentFadeIn.m */; };
-		27C6B2491CA6D52B00DA47B3 /* CYAlertPresentSlideDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2301CA6D52B00DA47B3 /* CYAlertPresentSlideDown.m */; };
-		27C6B24A1CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2321CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.m */; };
-		27C6B24B1CA6D52B00DA47B3 /* CYAlertPresentSlideRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2341CA6D52B00DA47B3 /* CYAlertPresentSlideRight.m */; };
-		27C6B24C1CA6D52B00DA47B3 /* CYAlertPresentSlideUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2361CA6D52B00DA47B3 /* CYAlertPresentSlideUp.m */; };
-		27C6B24D1CA6D52B00DA47B3 /* CYAlertPresentSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B2381CA6D52B00DA47B3 /* CYAlertPresentSystem.m */; };
-		27C6B24E1CA6D52B00DA47B3 /* CYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6B23B1CA6D52B00DA47B3 /* CYAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		274B660A1CAC0C3E00C26B89 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		274B660B1CAC0C3E00C26B89 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		274B660C1CAC0C3E00C26B89 /* CYAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertController.h; sourceTree = "<group>"; };
+		274B660D1CAC0C3E00C26B89 /* CYAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertController.m; sourceTree = "<group>"; };
+		274B660F1CAC0C3E00C26B89 /* CYAlertDismissContractHorizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissContractHorizontal.h; sourceTree = "<group>"; };
+		274B66101CAC0C3E00C26B89 /* CYAlertDismissContractHorizontal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissContractHorizontal.m; sourceTree = "<group>"; };
+		274B66111CAC0C3E00C26B89 /* CYAlertDismissContractVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissContractVertical.h; sourceTree = "<group>"; };
+		274B66121CAC0C3E00C26B89 /* CYAlertDismissContractVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissContractVertical.m; sourceTree = "<group>"; };
+		274B66131CAC0C3E00C26B89 /* CYAlertDismissFadeOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissFadeOut.h; sourceTree = "<group>"; };
+		274B66141CAC0C3E00C26B89 /* CYAlertDismissFadeOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissFadeOut.m; sourceTree = "<group>"; };
+		274B66151CAC0C3E00C26B89 /* CYAlertDismissSlideDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideDown.h; sourceTree = "<group>"; };
+		274B66161CAC0C3E00C26B89 /* CYAlertDismissSlideDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideDown.m; sourceTree = "<group>"; };
+		274B66171CAC0C3E00C26B89 /* CYAlertDismissSlideLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideLeft.h; sourceTree = "<group>"; };
+		274B66181CAC0C3E00C26B89 /* CYAlertDismissSlideLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideLeft.m; sourceTree = "<group>"; };
+		274B66191CAC0C3E00C26B89 /* CYAlertDismissSlideRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideRight.h; sourceTree = "<group>"; };
+		274B661A1CAC0C3E00C26B89 /* CYAlertDismissSlideRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideRight.m; sourceTree = "<group>"; };
+		274B661B1CAC0C3E00C26B89 /* CYAlertDismissSlideUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideUp.h; sourceTree = "<group>"; };
+		274B661C1CAC0C3E00C26B89 /* CYAlertDismissSlideUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideUp.m; sourceTree = "<group>"; };
+		274B661E1CAC0C3E00C26B89 /* CYAlertPresentBounce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentBounce.h; sourceTree = "<group>"; };
+		274B661F1CAC0C3E00C26B89 /* CYAlertPresentBounce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentBounce.m; sourceTree = "<group>"; };
+		274B66201CAC0C3E00C26B89 /* CYAlertPresentExpandHorizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentExpandHorizontal.h; sourceTree = "<group>"; };
+		274B66211CAC0C3E00C26B89 /* CYAlertPresentExpandHorizontal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentExpandHorizontal.m; sourceTree = "<group>"; };
+		274B66221CAC0C3E00C26B89 /* CYAlertPresentExpandVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentExpandVertical.h; sourceTree = "<group>"; };
+		274B66231CAC0C3E00C26B89 /* CYAlertPresentExpandVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentExpandVertical.m; sourceTree = "<group>"; };
+		274B66241CAC0C3E00C26B89 /* CYAlertPresentFadeIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentFadeIn.h; sourceTree = "<group>"; };
+		274B66251CAC0C3E00C26B89 /* CYAlertPresentFadeIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentFadeIn.m; sourceTree = "<group>"; };
+		274B66261CAC0C3E00C26B89 /* CYAlertPresentSlideDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideDown.h; sourceTree = "<group>"; };
+		274B66271CAC0C3E00C26B89 /* CYAlertPresentSlideDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideDown.m; sourceTree = "<group>"; };
+		274B66281CAC0C3E00C26B89 /* CYAlertPresentSlideLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideLeft.h; sourceTree = "<group>"; };
+		274B66291CAC0C3E00C26B89 /* CYAlertPresentSlideLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideLeft.m; sourceTree = "<group>"; };
+		274B662A1CAC0C3E00C26B89 /* CYAlertPresentSlideRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideRight.h; sourceTree = "<group>"; };
+		274B662B1CAC0C3E00C26B89 /* CYAlertPresentSlideRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideRight.m; sourceTree = "<group>"; };
+		274B662C1CAC0C3E00C26B89 /* CYAlertPresentSlideUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideUp.h; sourceTree = "<group>"; };
+		274B662D1CAC0C3E00C26B89 /* CYAlertPresentSlideUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideUp.m; sourceTree = "<group>"; };
+		274B662E1CAC0C3E00C26B89 /* CYAlertPresentSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSystem.h; sourceTree = "<group>"; };
+		274B662F1CAC0C3E00C26B89 /* CYAlertPresentSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSystem.m; sourceTree = "<group>"; };
+		274B66311CAC0C3E00C26B89 /* CYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertView.h; sourceTree = "<group>"; };
+		274B66321CAC0C3E00C26B89 /* CYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertView.m; sourceTree = "<group>"; };
 		27C6B1F71CA6D4D600DA47B3 /* CyAlertControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyAlertControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C6B1FB1CA6D4D600DA47B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27C6B1FD1CA6D4D600DA47B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27C6B1FE1CA6D4D600DA47B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		27C6B2001CA6D4D600DA47B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		27C6B2011CA6D4D600DA47B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		27C6B2001CA6D4D600DA47B3 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		27C6B2011CA6D4D600DA47B3 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		27C6B2041CA6D4D600DA47B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27C6B2061CA6D4D600DA47B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27C6B2091CA6D4D600DA47B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27C6B20B1CA6D4D600DA47B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27C6B2131CA6D52B00DA47B3 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
-		27C6B2141CA6D52B00DA47B3 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
-		27C6B2151CA6D52B00DA47B3 /* CYAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertController.h; sourceTree = "<group>"; };
-		27C6B2161CA6D52B00DA47B3 /* CYAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertController.m; sourceTree = "<group>"; };
-		27C6B2181CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissContractHorizontal.h; sourceTree = "<group>"; };
-		27C6B2191CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissContractHorizontal.m; sourceTree = "<group>"; };
-		27C6B21A1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissContractVertical.h; sourceTree = "<group>"; };
-		27C6B21B1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissContractVertical.m; sourceTree = "<group>"; };
-		27C6B21C1CA6D52B00DA47B3 /* CYAlertDismissFadeOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissFadeOut.h; sourceTree = "<group>"; };
-		27C6B21D1CA6D52B00DA47B3 /* CYAlertDismissFadeOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissFadeOut.m; sourceTree = "<group>"; };
-		27C6B21E1CA6D52B00DA47B3 /* CYAlertDismissSlideDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideDown.h; sourceTree = "<group>"; };
-		27C6B21F1CA6D52B00DA47B3 /* CYAlertDismissSlideDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideDown.m; sourceTree = "<group>"; };
-		27C6B2201CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideLeft.h; sourceTree = "<group>"; };
-		27C6B2211CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideLeft.m; sourceTree = "<group>"; };
-		27C6B2221CA6D52B00DA47B3 /* CYAlertDismissSlideRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideRight.h; sourceTree = "<group>"; };
-		27C6B2231CA6D52B00DA47B3 /* CYAlertDismissSlideRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideRight.m; sourceTree = "<group>"; };
-		27C6B2241CA6D52B00DA47B3 /* CYAlertDismissSlideUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissSlideUp.h; sourceTree = "<group>"; };
-		27C6B2251CA6D52B00DA47B3 /* CYAlertDismissSlideUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertDismissSlideUp.m; sourceTree = "<group>"; };
-		27C6B2271CA6D52B00DA47B3 /* CYAlertPresentBounce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentBounce.h; sourceTree = "<group>"; };
-		27C6B2281CA6D52B00DA47B3 /* CYAlertPresentBounce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentBounce.m; sourceTree = "<group>"; };
-		27C6B2291CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentExpandHorizontal.h; sourceTree = "<group>"; };
-		27C6B22A1CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentExpandHorizontal.m; sourceTree = "<group>"; };
-		27C6B22B1CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentExpandVertical.h; sourceTree = "<group>"; };
-		27C6B22C1CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentExpandVertical.m; sourceTree = "<group>"; };
-		27C6B22D1CA6D52B00DA47B3 /* CYAlertPresentFadeIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentFadeIn.h; sourceTree = "<group>"; };
-		27C6B22E1CA6D52B00DA47B3 /* CYAlertPresentFadeIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentFadeIn.m; sourceTree = "<group>"; };
-		27C6B22F1CA6D52B00DA47B3 /* CYAlertPresentSlideDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideDown.h; sourceTree = "<group>"; };
-		27C6B2301CA6D52B00DA47B3 /* CYAlertPresentSlideDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideDown.m; sourceTree = "<group>"; };
-		27C6B2311CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideLeft.h; sourceTree = "<group>"; };
-		27C6B2321CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideLeft.m; sourceTree = "<group>"; };
-		27C6B2331CA6D52B00DA47B3 /* CYAlertPresentSlideRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideRight.h; sourceTree = "<group>"; };
-		27C6B2341CA6D52B00DA47B3 /* CYAlertPresentSlideRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideRight.m; sourceTree = "<group>"; };
-		27C6B2351CA6D52B00DA47B3 /* CYAlertPresentSlideUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSlideUp.h; sourceTree = "<group>"; };
-		27C6B2361CA6D52B00DA47B3 /* CYAlertPresentSlideUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSlideUp.m; sourceTree = "<group>"; };
-		27C6B2371CA6D52B00DA47B3 /* CYAlertPresentSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertPresentSystem.h; sourceTree = "<group>"; };
-		27C6B2381CA6D52B00DA47B3 /* CYAlertPresentSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertPresentSystem.m; sourceTree = "<group>"; };
-		27C6B23A1CA6D52B00DA47B3 /* CYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertView.h; sourceTree = "<group>"; };
-		27C6B23B1CA6D52B00DA47B3 /* CYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +96,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		274B66081CAC0C3E00C26B89 /* CYAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				274B660C1CAC0C3E00C26B89 /* CYAlertController.h */,
+				274B660D1CAC0C3E00C26B89 /* CYAlertController.m */,
+				274B66091CAC0C3E00C26B89 /* Category */,
+				274B660E1CAC0C3E00C26B89 /* CYAlertDismissAnimator */,
+				274B661D1CAC0C3E00C26B89 /* CYAlertPresentAnimator */,
+				274B66301CAC0C3E00C26B89 /* CYAlertView */,
+			);
+			path = CYAlertController;
+			sourceTree = "<group>";
+		};
+		274B66091CAC0C3E00C26B89 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				274B660A1CAC0C3E00C26B89 /* NSString+Size.h */,
+				274B660B1CAC0C3E00C26B89 /* NSString+Size.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		274B660E1CAC0C3E00C26B89 /* CYAlertDismissAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				274B660F1CAC0C3E00C26B89 /* CYAlertDismissContractHorizontal.h */,
+				274B66101CAC0C3E00C26B89 /* CYAlertDismissContractHorizontal.m */,
+				274B66111CAC0C3E00C26B89 /* CYAlertDismissContractVertical.h */,
+				274B66121CAC0C3E00C26B89 /* CYAlertDismissContractVertical.m */,
+				274B66131CAC0C3E00C26B89 /* CYAlertDismissFadeOut.h */,
+				274B66141CAC0C3E00C26B89 /* CYAlertDismissFadeOut.m */,
+				274B66151CAC0C3E00C26B89 /* CYAlertDismissSlideDown.h */,
+				274B66161CAC0C3E00C26B89 /* CYAlertDismissSlideDown.m */,
+				274B66171CAC0C3E00C26B89 /* CYAlertDismissSlideLeft.h */,
+				274B66181CAC0C3E00C26B89 /* CYAlertDismissSlideLeft.m */,
+				274B66191CAC0C3E00C26B89 /* CYAlertDismissSlideRight.h */,
+				274B661A1CAC0C3E00C26B89 /* CYAlertDismissSlideRight.m */,
+				274B661B1CAC0C3E00C26B89 /* CYAlertDismissSlideUp.h */,
+				274B661C1CAC0C3E00C26B89 /* CYAlertDismissSlideUp.m */,
+			);
+			path = CYAlertDismissAnimator;
+			sourceTree = "<group>";
+		};
+		274B661D1CAC0C3E00C26B89 /* CYAlertPresentAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				274B661E1CAC0C3E00C26B89 /* CYAlertPresentBounce.h */,
+				274B661F1CAC0C3E00C26B89 /* CYAlertPresentBounce.m */,
+				274B66201CAC0C3E00C26B89 /* CYAlertPresentExpandHorizontal.h */,
+				274B66211CAC0C3E00C26B89 /* CYAlertPresentExpandHorizontal.m */,
+				274B66221CAC0C3E00C26B89 /* CYAlertPresentExpandVertical.h */,
+				274B66231CAC0C3E00C26B89 /* CYAlertPresentExpandVertical.m */,
+				274B66241CAC0C3E00C26B89 /* CYAlertPresentFadeIn.h */,
+				274B66251CAC0C3E00C26B89 /* CYAlertPresentFadeIn.m */,
+				274B66261CAC0C3E00C26B89 /* CYAlertPresentSlideDown.h */,
+				274B66271CAC0C3E00C26B89 /* CYAlertPresentSlideDown.m */,
+				274B66281CAC0C3E00C26B89 /* CYAlertPresentSlideLeft.h */,
+				274B66291CAC0C3E00C26B89 /* CYAlertPresentSlideLeft.m */,
+				274B662A1CAC0C3E00C26B89 /* CYAlertPresentSlideRight.h */,
+				274B662B1CAC0C3E00C26B89 /* CYAlertPresentSlideRight.m */,
+				274B662C1CAC0C3E00C26B89 /* CYAlertPresentSlideUp.h */,
+				274B662D1CAC0C3E00C26B89 /* CYAlertPresentSlideUp.m */,
+				274B662E1CAC0C3E00C26B89 /* CYAlertPresentSystem.h */,
+				274B662F1CAC0C3E00C26B89 /* CYAlertPresentSystem.m */,
+			);
+			path = CYAlertPresentAnimator;
+			sourceTree = "<group>";
+		};
+		274B66301CAC0C3E00C26B89 /* CYAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				274B66311CAC0C3E00C26B89 /* CYAlertView.h */,
+				274B66321CAC0C3E00C26B89 /* CYAlertView.m */,
+			);
+			path = CYAlertView;
+			sourceTree = "<group>";
+		};
 		27C6B1EE1CA6D4D600DA47B3 = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +192,9 @@
 		27C6B1F91CA6D4D600DA47B3 /* CyAlertControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				27C6B2111CA6D52B00DA47B3 /* CYAlertController */,
-				27C6B2001CA6D4D600DA47B3 /* ViewController.h */,
-				27C6B2011CA6D4D600DA47B3 /* ViewController.m */,
+				274B66081CAC0C3E00C26B89 /* CYAlertController */,
+				27C6B2001CA6D4D600DA47B3 /* DemoViewController.h */,
+				27C6B2011CA6D4D600DA47B3 /* DemoViewController.m */,
 				27C6B1FA1CA6D4D600DA47B3 /* Supporting Files */,
 			);
 			path = CyAlertControllerDemo;
@@ -135,83 +212,6 @@
 				27C6B1FB1CA6D4D600DA47B3 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		27C6B2111CA6D52B00DA47B3 /* CYAlertController */ = {
-			isa = PBXGroup;
-			children = (
-				27C6B2151CA6D52B00DA47B3 /* CYAlertController.h */,
-				27C6B2161CA6D52B00DA47B3 /* CYAlertController.m */,
-				27C6B2171CA6D52B00DA47B3 /* CYAlertDismissAnimator */,
-				27C6B2261CA6D52B00DA47B3 /* CYAlertPresentAnimator */,
-				27C6B2391CA6D52B00DA47B3 /* CYAlertView */,
-				27C6B2121CA6D52B00DA47B3 /* Category */,
-			);
-			path = CYAlertController;
-			sourceTree = "<group>";
-		};
-		27C6B2121CA6D52B00DA47B3 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				27C6B2131CA6D52B00DA47B3 /* NSString+Size.h */,
-				27C6B2141CA6D52B00DA47B3 /* NSString+Size.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		27C6B2171CA6D52B00DA47B3 /* CYAlertDismissAnimator */ = {
-			isa = PBXGroup;
-			children = (
-				27C6B2181CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.h */,
-				27C6B2191CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.m */,
-				27C6B21A1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.h */,
-				27C6B21B1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.m */,
-				27C6B21C1CA6D52B00DA47B3 /* CYAlertDismissFadeOut.h */,
-				27C6B21D1CA6D52B00DA47B3 /* CYAlertDismissFadeOut.m */,
-				27C6B21E1CA6D52B00DA47B3 /* CYAlertDismissSlideDown.h */,
-				27C6B21F1CA6D52B00DA47B3 /* CYAlertDismissSlideDown.m */,
-				27C6B2201CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.h */,
-				27C6B2211CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.m */,
-				27C6B2221CA6D52B00DA47B3 /* CYAlertDismissSlideRight.h */,
-				27C6B2231CA6D52B00DA47B3 /* CYAlertDismissSlideRight.m */,
-				27C6B2241CA6D52B00DA47B3 /* CYAlertDismissSlideUp.h */,
-				27C6B2251CA6D52B00DA47B3 /* CYAlertDismissSlideUp.m */,
-			);
-			path = CYAlertDismissAnimator;
-			sourceTree = "<group>";
-		};
-		27C6B2261CA6D52B00DA47B3 /* CYAlertPresentAnimator */ = {
-			isa = PBXGroup;
-			children = (
-				27C6B2271CA6D52B00DA47B3 /* CYAlertPresentBounce.h */,
-				27C6B2281CA6D52B00DA47B3 /* CYAlertPresentBounce.m */,
-				27C6B2291CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.h */,
-				27C6B22A1CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.m */,
-				27C6B22B1CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.h */,
-				27C6B22C1CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.m */,
-				27C6B22D1CA6D52B00DA47B3 /* CYAlertPresentFadeIn.h */,
-				27C6B22E1CA6D52B00DA47B3 /* CYAlertPresentFadeIn.m */,
-				27C6B22F1CA6D52B00DA47B3 /* CYAlertPresentSlideDown.h */,
-				27C6B2301CA6D52B00DA47B3 /* CYAlertPresentSlideDown.m */,
-				27C6B2311CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.h */,
-				27C6B2321CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.m */,
-				27C6B2331CA6D52B00DA47B3 /* CYAlertPresentSlideRight.h */,
-				27C6B2341CA6D52B00DA47B3 /* CYAlertPresentSlideRight.m */,
-				27C6B2351CA6D52B00DA47B3 /* CYAlertPresentSlideUp.h */,
-				27C6B2361CA6D52B00DA47B3 /* CYAlertPresentSlideUp.m */,
-				27C6B2371CA6D52B00DA47B3 /* CYAlertPresentSystem.h */,
-				27C6B2381CA6D52B00DA47B3 /* CYAlertPresentSystem.m */,
-			);
-			path = CYAlertPresentAnimator;
-			sourceTree = "<group>";
-		};
-		27C6B2391CA6D52B00DA47B3 /* CYAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				27C6B23A1CA6D52B00DA47B3 /* CYAlertView.h */,
-				27C6B23B1CA6D52B00DA47B3 /* CYAlertView.m */,
-			);
-			path = CYAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,28 +285,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C6B23C1CA6D52B00DA47B3 /* NSString+Size.m in Sources */,
-				27C6B24D1CA6D52B00DA47B3 /* CYAlertPresentSystem.m in Sources */,
-				27C6B24C1CA6D52B00DA47B3 /* CYAlertPresentSlideUp.m in Sources */,
-				27C6B23E1CA6D52B00DA47B3 /* CYAlertDismissContractHorizontal.m in Sources */,
-				27C6B2401CA6D52B00DA47B3 /* CYAlertDismissFadeOut.m in Sources */,
-				27C6B2451CA6D52B00DA47B3 /* CYAlertPresentBounce.m in Sources */,
-				27C6B2021CA6D4D600DA47B3 /* ViewController.m in Sources */,
-				27C6B2491CA6D52B00DA47B3 /* CYAlertPresentSlideDown.m in Sources */,
+				274B66331CAC0C3E00C26B89 /* NSString+Size.m in Sources */,
+				274B66441CAC0C3E00C26B89 /* CYAlertPresentSystem.m in Sources */,
+				274B66431CAC0C3E00C26B89 /* CYAlertPresentSlideUp.m in Sources */,
+				274B66351CAC0C3E00C26B89 /* CYAlertDismissContractHorizontal.m in Sources */,
+				274B66371CAC0C3E00C26B89 /* CYAlertDismissFadeOut.m in Sources */,
+				274B663C1CAC0C3E00C26B89 /* CYAlertPresentBounce.m in Sources */,
+				27C6B2021CA6D4D600DA47B3 /* DemoViewController.m in Sources */,
+				274B66401CAC0C3E00C26B89 /* CYAlertPresentSlideDown.m in Sources */,
 				27C6B1FF1CA6D4D600DA47B3 /* AppDelegate.m in Sources */,
-				27C6B2411CA6D52B00DA47B3 /* CYAlertDismissSlideDown.m in Sources */,
-				27C6B2431CA6D52B00DA47B3 /* CYAlertDismissSlideRight.m in Sources */,
-				27C6B2421CA6D52B00DA47B3 /* CYAlertDismissSlideLeft.m in Sources */,
-				27C6B2441CA6D52B00DA47B3 /* CYAlertDismissSlideUp.m in Sources */,
-				27C6B24A1CA6D52B00DA47B3 /* CYAlertPresentSlideLeft.m in Sources */,
-				27C6B2471CA6D52B00DA47B3 /* CYAlertPresentExpandVertical.m in Sources */,
-				27C6B23F1CA6D52B00DA47B3 /* CYAlertDismissContractVertical.m in Sources */,
-				27C6B24B1CA6D52B00DA47B3 /* CYAlertPresentSlideRight.m in Sources */,
+				274B66381CAC0C3E00C26B89 /* CYAlertDismissSlideDown.m in Sources */,
+				274B663A1CAC0C3E00C26B89 /* CYAlertDismissSlideRight.m in Sources */,
+				274B66391CAC0C3E00C26B89 /* CYAlertDismissSlideLeft.m in Sources */,
+				274B663B1CAC0C3E00C26B89 /* CYAlertDismissSlideUp.m in Sources */,
+				274B66411CAC0C3E00C26B89 /* CYAlertPresentSlideLeft.m in Sources */,
+				274B663E1CAC0C3E00C26B89 /* CYAlertPresentExpandVertical.m in Sources */,
+				274B66361CAC0C3E00C26B89 /* CYAlertDismissContractVertical.m in Sources */,
+				274B66421CAC0C3E00C26B89 /* CYAlertPresentSlideRight.m in Sources */,
 				27C6B1FC1CA6D4D600DA47B3 /* main.m in Sources */,
-				27C6B2481CA6D52B00DA47B3 /* CYAlertPresentFadeIn.m in Sources */,
-				27C6B24E1CA6D52B00DA47B3 /* CYAlertView.m in Sources */,
-				27C6B2461CA6D52B00DA47B3 /* CYAlertPresentExpandHorizontal.m in Sources */,
-				27C6B23D1CA6D52B00DA47B3 /* CYAlertController.m in Sources */,
+				274B663F1CAC0C3E00C26B89 /* CYAlertPresentFadeIn.m in Sources */,
+				274B66451CAC0C3E00C26B89 /* CYAlertView.m in Sources */,
+				274B663D1CAC0C3E00C26B89 /* CYAlertPresentExpandHorizontal.m in Sources */,
+				274B66341CAC0C3E00C26B89 /* CYAlertController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

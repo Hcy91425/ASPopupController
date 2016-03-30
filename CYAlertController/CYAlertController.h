@@ -11,7 +11,7 @@
 // 灰色背景透明度
 static const CGFloat backgroundAlpha = 0.4;
 
-typedef void (^EmptyBlock) ();
+typedef void (^ _Nullable EmptyBlock) ();
 
 // present style
 typedef NS_ENUM(NSInteger, CYAlertPresentStyle) {
@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
  *    @param presentStyle present风格
  *    @param dismissStyle dismiss风格
  */
-+ (nonnull instancetype)alertWithCustomView:(nonnull UIView *)customView presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
++ (_Nonnull instancetype)alertWithCustomView:(UIView * _Nonnull)customView presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
 
 /**
  *    左右两个按钮，自定义style
@@ -65,7 +65,7 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
  *    @param presentStyle      present风格
  *    @param dismissStyle      dismiss风格
  */
-+ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message leftButtonTitle:(nullable NSString *)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(nullable NSString *)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message leftButtonTitle:(NSString * _Nullable)leftButtonTitle leftButtonAction:(EmptyBlock)leftButtonAction rightButtonTitle:(NSString * _Nullable)rightButtonTitle rightButtonAction:(EmptyBlock)rightButtonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
 
 /**
  *    一个按钮，自定义style
@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
  *    @param presentStyle present风格
  *    @param dismissStyle dismiss风格
  */
-+ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message buttonTitle:(nullable NSString *)buttonTitle buttonAction:(nullable EmptyBlock)buttonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonTitle:(NSString * _Nullable)buttonTitle buttonAction:(EmptyBlock)buttonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
 
 /**
  *    两个按钮，默认style
@@ -89,7 +89,7 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
  *    @param rightButtonTitle  右边按钮标题
  *    @param rightButtonAction 右边按钮事件
  */
-+ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message leftButtonTitle:(nullable NSString *)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(nullable NSString *)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction ;
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message leftButtonTitle:(NSString * _Nullable)leftButtonTitle leftButtonAction:(EmptyBlock)leftButtonAction rightButtonTitle:(NSString * _Nullable)rightButtonTitle rightButtonAction:(EmptyBlock)rightButtonAction ;
 
 
 /**
@@ -100,5 +100,5 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
  *    @param buttonTitle  按钮标题
  *    @param buttonAction 按钮事件
  */
-+ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message buttonTitle:(nullable NSString *)buttonTitle buttonAction:(nullable EmptyBlock)buttonAction ;
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonTitle:(NSString * _Nullable)buttonTitle buttonAction:(EmptyBlock)buttonAction ;
 @end
