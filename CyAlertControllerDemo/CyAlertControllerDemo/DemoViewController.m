@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.translucent = NO;
     self.title = @"CYAlertControllerDemo";
     
     _titleArray = @[@"PresentSystem & DismissFadeOut",
@@ -52,6 +52,13 @@
     
     CYAlertController *alert = [CYAlertController alertWithTitle:@"警告！警告！💥"
                                                          message:@"逗你玩儿呢 ~ 😜"];
+    /*
+    CYAlertController *alert2 = [CYAlertController alertWithTitle:@"警告！警告！💥"
+                                                          message:@"逗你玩儿呢 ~ 😜"
+                                                     presentStyle:CYAlertPresentStyleSystem
+                                                     dismissStyle:CYAlertDismissStyleFadeOut];
+     */
+    
     // 可以设置 alertView 的圆角半径，默认为6
     alert.alertViewCornerRadius = 10;
     
@@ -59,6 +66,8 @@
     CYAlertAction *defaultAction = [CYAlertAction actionWithTitle:@"确定" style:CYAlertActionStyleDefault handler:^{ NSLog(@"Default"); }];
     CYAlertAction *destructiveAction = [CYAlertAction actionWithTitle:@"危险" style:CYAlertActionStyleDestructive handler:^{ NSLog(@"Destructive"); }];
     CYAlertAction *cancelAction = [CYAlertAction actionWithTitle:@"取消" style:CYAlertActionStyleCancel handler:^{ NSLog(@"Cancel"); }];
+    
+    
     
     // 一次性添加
     [alert addActions:@[defaultAction, destructiveAction, cancelAction]];
