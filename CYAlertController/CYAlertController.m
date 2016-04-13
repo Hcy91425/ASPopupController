@@ -7,7 +7,10 @@
 //
 
 #import "CYAlertController.h"
+#import "CYAlertView.h"
+#import "Masonry.h"
 
+// Present
 #import "CYAlertPresentSystem.h"
 #import "CYAlertPresentFadeIn.h"
 #import "CYAlertPresentBounce.h"
@@ -18,7 +21,7 @@
 #import "CYAlertPresentSlideLeft.h"
 #import "CYAlertPresentSlideRight.h"
 
-
+// Dismiss
 #import "CYAlertDismissFadeOut.h"
 #import "CYAlertDismissContractHorizontal.h"
 #import "CYAlertDismissContractVertical.h"
@@ -28,10 +31,6 @@
 #import "CYAlertDismissSlideRight.h"
 
 
-
-
-#import "CYAlertView.h"
-
 @interface CYAlertController ()<UIViewControllerTransitioningDelegate>
 
 @end
@@ -40,13 +39,13 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.transitioningDelegate = self;          // 设置自己为转场代理
+        self.transitioningDelegate = self;                          // 设置自己为转场代理
         self.modalPresentationStyle = UIModalPresentationCustom;    // 自定义转场模式
         
         // 灰色半透明背景
         _backgroundView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         _backgroundView.backgroundColor = [UIColor blackColor];
-        _backgroundView.alpha = 0.5;
+        _backgroundView.alpha = backgroundAlpha;
     }
     return self;
 }
@@ -56,72 +55,68 @@
     // 背景透明
     self.view.backgroundColor = [UIColor clearColor];
     
-    // 设置 alertView 在屏幕中心
-    _alertView.center = self.view.center;
-
     [self.view addSubview:_backgroundView];
     [self.view addSubview:_alertView];
+
+    // 设置 alertView 在屏幕中心
+    [_alertView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+    }];
+
 }
 
+/** 添加 action */
+- (void)addAction:(CYAlertAction * _Nonnull)action {
+    if ([_alertView isMemberOfClass:[CYAlertView class]]) {
+        [(CYAlertView *)_alertView addAction: action];
+    }
+}
+
+/** 直接添加一个数组的 action */
+- (void)addActions:(NSArray<CYAlertAction *> * _Nonnull)actions {
+    for (CYAlertAction *action in actions) {
+        [self addAction:action];
+    }
+}
+
+/** 设置 alertView 的圆角半径 */
+- (void)setAlertViewCornerRadius:(CGFloat)cornerRadius {
+    _alertView.layer.cornerRadius = cornerRadius;
+}
 
 #pragma mark - 类方法返回实例
 
-// 自定义弹出的view
-+ (_Nonnull instancetype)alertWithCustomView:(nonnull UIView *)customView presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle{
-    CYAlertController *alertController = [[CYAlertController alloc] init];
-    alertController.presentStyle = presentStyle;
-    alertController.dismissStyle = dismissStyle;
-    alertController.alertView = customView;
-    return alertController;
-}
-
-// 完整的初始化方法，供其他初始化方法调用
-+ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message leftButtonTitle:(NSString * _Nullable)leftButtonTitle leftButtonAction:(EmptyBlock)leftButtonAction rightButtonTitle:(NSString * _Nullable)rightButtonTitle rightButtonAction:(EmptyBlock)rightButtonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle {
+/** 标准初始化方法 */
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title
+                                message:(NSString * _Nullable)message
+                           presentStyle:(CYAlertPresentStyle)presentStyle
+                           dismissStyle:(CYAlertDismissStyle)dismissStyle {
     
     CYAlertController *alertController = [[CYAlertController alloc] init];
     alertController.presentStyle = presentStyle;
     alertController.dismissStyle = dismissStyle;
-    // 因为 alertView 要持有这两个block，所以传进去的 alertController 要转成 __weak
-    __weak CYAlertController *weakAlert = alertController;
-    alertController.alertView = [[CYAlertView alloc] initWithTitle:title
-                                                           message:message
-                                                   leftButtonTitle:leftButtonTitle
-                                                  leftButtonAction:^{
-                                                      if (leftButtonAction){ leftButtonAction(); }
-                                                      [weakAlert dismissViewControllerAnimated:YES completion:nil];
-                                                  }
-                                                  rightButtonTitle:rightButtonTitle rightButtonAction:^{
-                                                      if (rightButtonAction){ rightButtonAction(); }
-                                                      [weakAlert dismissViewControllerAnimated:YES completion:nil];
-                                                  }];
-    return alertController;
-    
-}
-
-+ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message leftButtonTitle:(NSString * _Nullable)leftButtonTitle leftButtonAction:(nullable EmptyBlock)leftButtonAction rightButtonTitle:(NSString * _Nullable)rightButtonTitle rightButtonAction:(nullable EmptyBlock)rightButtonAction {
-    
-    CYAlertController *alertController = [self alertWithTitle:title message:message leftButtonTitle:leftButtonTitle leftButtonAction:leftButtonAction rightButtonTitle:rightButtonTitle rightButtonAction:rightButtonAction presentStyle:CYAlertPresentStyleSystem dismissStyle:CYAlertDismissStyleFadeOut];
-
+    alertController.alertView = [[CYAlertView alloc] initWithTitle:title message:message];
+    ((CYAlertView *)(alertController.alertView)).controller = alertController;
     return alertController;
 }
 
-+ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonTitle:(NSString * _Nullable)buttonTitle buttonAction:(EmptyBlock)buttonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle {
+/** 默认转场初始化 */
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title
+                                message:(NSString * _Nullable)message {
     
-    CYAlertController *alertController = [self alertWithTitle:title message:message leftButtonTitle:buttonTitle leftButtonAction:buttonAction rightButtonTitle:nil rightButtonAction:nil presentStyle:presentStyle dismissStyle:dismissStyle];
-    
-    return alertController;
-}
-
-+ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonTitle:(NSString * _Nullable)buttonTitle buttonAction:(EmptyBlock)buttonAction {
-    
-    CYAlertController *alertController = [self alertWithTitle:title message:message leftButtonTitle:buttonTitle leftButtonAction:buttonAction rightButtonTitle:nil rightButtonAction:nil presentStyle:CYAlertPresentStyleSystem dismissStyle:CYAlertDismissStyleFadeOut];
-    
+    CYAlertController *alertController = [[CYAlertController alloc] init];
+    alertController.presentStyle = CYAlertPresentStyleSystem;
+    alertController.dismissStyle = CYAlertDismissStyleFadeOut;
+    alertController.alertView = [[CYAlertView alloc] initWithTitle:title message:message];
+    ((CYAlertView *)(alertController.alertView)).controller = alertController;
     return alertController;
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate
 
+/** 返回Present动画 */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    
     switch (_presentStyle) {
         case CYAlertPresentStyleFadeIn:
             return [[CYAlertPresentFadeIn alloc] init];
@@ -152,6 +147,7 @@
     }
 }
 
+/** 返回Dismiss动画 */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     switch (_dismissStyle) {
         case CYAlertDismissStyleContractHorizontal:

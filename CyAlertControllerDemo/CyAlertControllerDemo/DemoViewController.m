@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.translucent = NO;
+//    self.navigationController.navigationBar.translucent = NO;
     self.title = @"CYAlertControllerDemo";
     
     _titleArray = @[@"PresentSystem & DismissFadeOut",
@@ -28,8 +28,7 @@
                     @"PresentSlideDown & DismissSlideDown",
                     @"PresentSlideUp & DismissSlideUp",
                     @"PresentSlideLeft & DismissSlideLeft",
-                    @"PresentSlideRight & DismissSlideRight",
-                    @"CustomView"];
+                    @"PresentSlideRight & DismissSlideRight"];
     
     UITableView *demoTable = [[UITableView alloc] initWithFrame:self.view.frame];
     demoTable.delegate = self;
@@ -38,7 +37,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return _titleArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -47,16 +46,30 @@
     return cell;
 }
 
+/** 使用看这里！ */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    CYAlertController *alert = [CYAlertController alertWithTitle:@"AlertDemo"
-                                                         message:@"Hello CYAlertController 😜"
-                                                     buttonTitle:@"Done"
-                                                    buttonAction:^{
-                                                        NSLog(@"done button clicked");
-                                                    }];
+    CYAlertController *alert = [CYAlertController alertWithTitle:@"警告！警告！💥"
+                                                         message:@"逗你玩儿呢 ~ 😜"];
+    // 可以设置 alertView 的圆角半径，默认为6
+    alert.alertViewCornerRadius = 10;
     
+    // 创建 action
+    CYAlertAction *defaultAction = [CYAlertAction actionWithTitle:@"确定" style:CYAlertActionStyleDefault handler:^{ NSLog(@"Default"); }];
+    CYAlertAction *destructiveAction = [CYAlertAction actionWithTitle:@"危险" style:CYAlertActionStyleDestructive handler:^{ NSLog(@"Destructive"); }];
+    CYAlertAction *cancelAction = [CYAlertAction actionWithTitle:@"取消" style:CYAlertActionStyleCancel handler:^{ NSLog(@"Cancel"); }];
+    
+    // 一次性添加
+    [alert addActions:@[defaultAction, destructiveAction, cancelAction]];
+    
+    /* 也可以一个个添加
+     [alert addAction:defaultAction];
+     [alert addAction:destructiveAction];
+     [alert addAction:cancelAction];
+     */
+    
+    // 设置转场方式
     switch (indexPath.row) {
         case 0:
             alert.presentStyle = CYAlertPresentStyleSystem;
@@ -91,21 +104,6 @@
             alert.presentStyle = CYAlertPresentStyleSlideRight;
             alert.dismissStyle = CYAlertDismissStyleSlideRight;
             break;
-        case 9:{
-            // 自定义view
-            UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 270, 400)];
-            customView.backgroundColor = [UIColor whiteColor];
-            customView.layer.shadowColor = [UIColor blackColor].CGColor;
-            customView.layer.shadowOffset = CGSizeMake(1, 1);
-            customView.layer.shadowRadius = 5;
-            customView.layer.shadowOpacity = 0.7;
-            customView.layer.shadowPath = [UIBezierPath bezierPathWithRect:customView.bounds].CGPath;
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
-            [customView addGestureRecognizer:tap];
-            // 调用自定义view的方法
-            alert = [CYAlertController alertWithCustomView:customView presentStyle:CYAlertPresentStyleBounce dismissStyle:CYAlertDismissStyleFadeOut];
-            break;
-        }
         default:
             break;
     }
@@ -113,8 +111,5 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-- (void)tapAction {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 @end

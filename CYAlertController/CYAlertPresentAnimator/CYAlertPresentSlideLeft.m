@@ -17,7 +17,7 @@
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     CYAlertController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     toVC.backgroundView.alpha = 0;
-    toVC.alertView.center = CGPointMake(toVC.view.center.x+toVC.alertView.frame.size.width/2.0, toVC.view.center.y);
+    toVC.alertView.center = CGPointMake(toVC.view.frame.size.width+toVC.alertView.frame.size.width/2.0, toVC.view.center.y);
     
     UIView *containerView = [transitionContext containerView];
     [containerView addSubview:toVC.view];

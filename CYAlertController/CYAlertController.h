@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CYAlertAction.h"
 
-// 灰色背景透明度
+@class CYAlertView;
+
+/** 灰色背景透明度 */
 static const CGFloat backgroundAlpha = 0.4;
 
 typedef void (^ _Nullable EmptyBlock) ();
 
-// present style
+/** present style */
 typedef NS_ENUM(NSInteger, CYAlertPresentStyle) {
     CYAlertPresentStyleSystem,          // 系统样式
     CYAlertPresentStyleFadeIn,          // 渐入
@@ -26,7 +29,7 @@ typedef NS_ENUM(NSInteger, CYAlertPresentStyle) {
     CYAlertPresentStyleSlideRight,      // 从左往右划入
 };
 
-// dismiss style
+/** dismiss style */
 typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
     CYAlertDismissStyleFadeOut,             // 渐出
     CYAlertDismissStyleContractHorizontal,  // 水平收起
@@ -38,67 +41,59 @@ typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
 };
 
 @interface CYAlertController : UIViewController
+
+/** alert 视图 */
 @property (nonnull, nonatomic, strong)UIView *alertView;
+
+/** 半透明背景 */
 @property (nonnull, nonatomic, strong)UIView *backgroundView;
+
+/** present 转场风格 */
 @property (nonatomic, assign)CYAlertPresentStyle presentStyle;
+
+/** dismiss 转场风格 */
 @property (nonatomic, assign)CYAlertDismissStyle dismissStyle;
 
+- (void)setAlertViewCornerRadius:(CGFloat)cornerRadius;
 
 /**
- *    自定义 alertView， 自定义style
+ *    添加 action
  *
- *    @param customView   自定义view
- *    @param presentStyle present风格
- *    @param dismissStyle dismiss风格
+ *    @param action action
  */
-+ (_Nonnull instancetype)alertWithCustomView:(UIView * _Nonnull)customView presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
+- (void)addAction:(CYAlertAction * _Nonnull)action;
 
 /**
- *    左右两个按钮，自定义style
+ *    直接添加一个数组的 action
  *
- *    @param title             标题
- *    @param message           信息
- *    @param leftButtonTitle   左边的按钮标题
- *    @param leftButtonAction  左边按钮事件
- *    @param rightButtonTitle  右边按钮标题
- *    @param rightButtonAction 右边按钮事件
- *    @param presentStyle      present风格
- *    @param dismissStyle      dismiss风格
+ *    @param actions 放有 action 的数组
  */
-+ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message leftButtonTitle:(NSString * _Nullable)leftButtonTitle leftButtonAction:(EmptyBlock)leftButtonAction rightButtonTitle:(NSString * _Nullable)rightButtonTitle rightButtonAction:(EmptyBlock)rightButtonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
+- (void)addActions:(NSArray<CYAlertAction *> * _Nonnull)actions;
 
 /**
- *    一个按钮，自定义style
+ *    标准初始化方法
  *
  *    @param title        标题
- *    @param message      信息
- *    @param buttonTitle  按钮标题
- *    @param buttonAction 按钮事件
- *    @param presentStyle present风格
- *    @param dismissStyle dismiss风格
+ *    @param message      消息
+ *    @param presentStyle present 转场风格
+ *    @param dismissStyle dismiss 转场风格
+ *
+ *    @return alert控制器
  */
-+ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonTitle:(NSString * _Nullable)buttonTitle buttonAction:(EmptyBlock)buttonAction presentStyle:(CYAlertPresentStyle)presentStyle dismissStyle:(CYAlertDismissStyle)dismissStyle;
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title
+                                message:(NSString * _Nullable)message
+                           presentStyle:(CYAlertPresentStyle)presentStyle
+                           dismissStyle:(CYAlertDismissStyle)dismissStyle;
 
 /**
- *    两个按钮，默认style
+ *    默认转场初始化方法
  *
- *    @param title             标题
- *    @param message           信息
- *    @param leftButtonTitle   左边的按钮标题
- *    @param leftButtonAction  左边按钮事件
- *    @param rightButtonTitle  右边按钮标题
- *    @param rightButtonAction 右边按钮事件
- */
-+ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message leftButtonTitle:(NSString * _Nullable)leftButtonTitle leftButtonAction:(EmptyBlock)leftButtonAction rightButtonTitle:(NSString * _Nullable)rightButtonTitle rightButtonAction:(EmptyBlock)rightButtonAction ;
-
-
-/**
- *    一个按钮，默认风格
+ *    @param title   标题
+ *    @param message 消息
  *
- *    @param title        标题
- *    @param message      信息
- *    @param buttonTitle  按钮标题
- *    @param buttonAction 按钮事件
+ *    @return alert控制器
  */
-+ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonTitle:(NSString * _Nullable)buttonTitle buttonAction:(EmptyBlock)buttonAction ;
++ (_Nonnull instancetype)alertWithTitle:(NSString * _Nullable)title
+                                message:(NSString * _Nullable)message;
+
 @end
