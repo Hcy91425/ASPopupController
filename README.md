@@ -7,17 +7,18 @@
 ### 外观&动画
 ***
 
+#### 支持多个button，自适应高度
+
 <div align="center"><img src="http://7xrpns.com1.z0.glb.clouddn.com/AlertView_Preview.png"></div>
 
-<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert1.gif" width = 200>
-<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert2.gif" width = 200>
-<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert3.gif" width = 200>
-<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert4.gif" width = 200>
-<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert5.gif" width = 200>
-<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert6.gif" width = 200>
-<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert7.gif" width = 200>
-<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert8.gif" width = 200>
-<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert9.gif" width = 200>
+#### 部分动画
+
+<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert4.gif" width = 375>
+<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert5.gif" width = 375>
+<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert6.gif" width = 375>
+<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert7.gif" width = 375>
+<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert8.gif" width = 375>
+<img src="http://7xrpns.com1.z0.glb.clouddn.com/alert9.gif" width = 375>
 
 ### 使用
 ***
