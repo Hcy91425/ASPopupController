@@ -24,7 +24,17 @@
 ***
 
 #### 导入
-本项目中使用 [Masonry](https://github.com/SnapKit/Masonry) 自动布局，所以需要 Masonry 的支持，你可以从我的仓库中直接把 `CYAlertController` 和 `Masonry` 文件夹拖入你的项目，也可以通过 cocoapods 导入 Masonry（CYAlertController 目前还不支持 cocoapods😅）。然后在需要使用的地方导入头文件
+本项目中使用 [Masonry](https://github.com/SnapKit/Masonry) 自动布局。
+
+可以直接使用cocoapods导入，因为设置了依赖，所以会同时导入Masonry：
+
+```
+pod 'CYAlertController'
+```
+
+也可以直接往项目中拖入 `CYAlertController` 和 `Masonry` 文件夹到你的项目中
+
+然后在需要使用的地方导入头文件
 
 ```objc
 #import "CYAlertController.h"
