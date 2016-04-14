@@ -41,11 +41,14 @@ alert.presentStyle = CYAlertPresentStyleSystem;
 alert.dismissStyle = CYAlertDismissStyleFadeOut;
 
 // 或者直接一口气初始化
-
 CYAlertController *alert2 = [CYAlertController alertWithTitle:@"警告！警告！💥"
                                                       message:@"逗你玩儿呢 ~ 😜"
                                                  presentStyle:CYAlertPresentStyleSystem
                                                  dismissStyle:CYAlertDismissStyleFadeOut];
+                                                 
+// 还可以设置 alertView 的圆角半径，默认为6
+alert.alertViewCornerRadius = 10;
+
 ```
 创建 action(提供了3中与官方一样的style)，给 alert 添加 action ：
 

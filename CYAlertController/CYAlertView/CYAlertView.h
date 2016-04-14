@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Masonry.h"
+
 @class CYAlertAction;
 
 @interface CYAlertView : UIView

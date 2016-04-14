@@ -7,8 +7,9 @@
 //
 
 #import "CYAlertView.h"
-#import "NSString+Size.h"
 #import "CYAlertAction.h"
+#import "NSString+Size.h"
+#import "Masonry.h"
 
 /** 间隙 */
 const static CGFloat padding = 15.0;
