@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CYAlertController/*","CYAlertController/Category/*","CYAlertController/CYAlertView/*","CYAlertController/CYAlertPresentAnimator/*","CYAlertController/CYAlertDismissAnimator/*"   
+  s.source_files  = "CYAlertController/*","CYAlertController/Category/*","CYAlertController/CYAlertView/*","CYAlertController/CYAlertPresentAnimator/*","CYAlertController/CYAlertDismissAnimator/*"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -106,7 +106,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "CYAlertController/CYAlertView/*.bundle"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
