@@ -56,6 +56,41 @@ const static CGFloat buttonHeight = 40.0;
 
 @implementation CYAlertView
 
+/** 懒加载 */
+- (NSMutableArray<UIButton *> *)buttons {
+    if (!_buttons) {
+        _buttons = [NSMutableArray array];
+    }
+    return _buttons;
+}
+
+- (NSMutableArray<CYAlertAction *> *)actions {
+    if (!_actions) {
+        _actions = [NSMutableArray array];
+    }
+    return _actions;
+}
+
+- (UIImage *)whiteImage {
+    if (!_whiteImage) {
+        // 取出button的背景图
+        NSBundle *cyBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle]pathForResource:@"CYAlertViewController" ofType:@"bundle"]];
+        NSString *whiteImagePath = [cyBundle pathForResource:@"cy_white" ofType:@"png"];
+        _whiteImage = [UIImage imageWithContentsOfFile:whiteImagePath];
+    }
+    return _whiteImage;
+}
+
+- (UIImage *)grayImage {
+    if (!_grayImage) {
+        // 取出button的背景图
+        NSBundle *cyBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle]pathForResource:@"CYAlertViewController" ofType:@"bundle"]];
+        NSString *grayImagePath = [cyBundle pathForResource:@"cy_gray" ofType:@"png"];
+        _grayImage = [UIImage imageWithContentsOfFile:grayImagePath];
+    }
+    return _grayImage;
+}
+
 /** 初始化方法 */
 - (_Nonnull instancetype)initWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message {
     self = [super init];
@@ -135,32 +170,18 @@ const static CGFloat buttonHeight = 40.0;
 
 /** 添加 action */
 - (void)addAction:(CYAlertAction * _Nonnull)action {
-    // 如果 actions 为空，先初始化
-    if(!_actions) {
-        _actions = [NSMutableArray array];
-        _buttons = [NSMutableArray array];
-    }
+
     // 添加到 action 数组
-    [_actions addObject:action];
-    
-    // 如果图片不存在，先取出图片
-    if(!_whiteImage || !_grayImage) {
-        // 取出button的背景图
-        NSBundle *cyBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle]pathForResource:@"CYAlertViewController" ofType:@"bundle"]];
-        NSString *whiteImagePath = [cyBundle pathForResource:@"cy_white" ofType:@"png"];
-        NSString *grayImagePath = [cyBundle pathForResource:@"cy_gray" ofType:@"png"];
-        _whiteImage = [UIImage imageWithContentsOfFile:whiteImagePath];
-        _grayImage = [UIImage imageWithContentsOfFile:grayImagePath];
-    }
+    [self.actions addObject:action];
     
     // 创建 button，设置它的属性
     UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [actionButton setTag:[_actions indexOfObject:action]];
+    [actionButton setTag:[self.actions indexOfObject:action]];
     [actionButton setTitle:action.title forState:UIControlStateNormal];
     [actionButton setTitleColor:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1 alpha:1] forState:UIControlStateNormal];
     [actionButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
-    [actionButton setBackgroundImage:_whiteImage forState:UIControlStateNormal];
-    [actionButton setBackgroundImage:_grayImage forState:UIControlStateHighlighted];
+    [actionButton setBackgroundImage:self.whiteImage forState:UIControlStateNormal];
+    [actionButton setBackgroundImage:self.grayImage forState:UIControlStateHighlighted];
     if (action.style == CYAlertActionStyleDestructive) {
         [actionButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     } else if (action.style == CYAlertActionStyleCancel) {
@@ -172,24 +193,18 @@ const static CGFloat buttonHeight = 40.0;
     [self addSubview:actionButton];
     
     // 添加到 button数组
-    [_buttons addObject:actionButton];
+    [self.buttons addObject:actionButton];
     
-    // 根据调用次数的不同，来布局
-    switch (_buttons.count) {
-        case 2:
-            [self layoutButtonsHorizontal];
-            break;
-        default:
-            [self layoutButtonsVertical];
-            break;
-    }
+    // 因为可能添加多个 button，所以只要标记为需要更新，这样即使添加了多次也只会更新一次
+    [self setNeedsUpdateConstraints];
+    
 }
 
 /** 点击按钮事件 */
 - (void)actionButtonDidClicked:(UIButton *)sender {
     
     // 根据 tag 取到 handler
-    void (^handler) () = _actions[sender.tag].handler;
+    void (^handler) () = self.actions[sender.tag].handler;
     if (handler) {
         handler();
     }
@@ -198,12 +213,30 @@ const static CGFloat buttonHeight = 40.0;
     if (_controller) {
         [_controller dismissViewControllerAnimated:YES completion:nil];
     }
+    
+}
+
+/** 更新约束 */
+- (void)updateConstraints {
+    
+    // 根据当前button的数量来布局
+    switch (self.buttons.count) {
+        case 2:
+            [self layoutButtonsHorizontal];
+            break;
+        default:
+            [self layoutButtonsVertical];
+            break;
+    }
+    [super updateConstraints];
+    
 }
 
 /** 两个 button 时的水平布局 */
 - (void)layoutButtonsHorizontal {
-    UIButton *leftButton = _buttons[0];
-    UIButton *rightButton = _buttons[1];
+    
+    UIButton *leftButton = self.buttons[0];
+    UIButton *rightButton = self.buttons[1];
     
     // 左边按钮
     [leftButton mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -220,6 +253,7 @@ const static CGFloat buttonHeight = 40.0;
         make.left.equalTo(leftButton.mas_right).offset(0.5);
         make.width.equalTo(leftButton);
     }];
+    
 }
 
 /** 垂直布局 */
@@ -229,7 +263,7 @@ const static CGFloat buttonHeight = 40.0;
     __block UIView *lastView;
     
     // 遍历在数组中的button，添加到alert上
-    for(UIButton *button in _buttons) {
+    for(UIButton *button in self.buttons) {
         [button mas_remakeConstraints:^(MASConstraintMaker *make) {
             // lastView 为空也就是第一个 button 的时候
             if(!lastView) {
@@ -244,8 +278,8 @@ const static CGFloat buttonHeight = 40.0;
     }
     
     // 更新 alert 底部约束
+    [_bottomConstraint uninstall];  // 删除旧的底部约束
     [self mas_makeConstraints:^(MASConstraintMaker *make) {
-        [_bottomConstraint uninstall];  // 删除旧的底部约束
         _bottomConstraint = make.bottom.equalTo(lastView);
     }];
 }
