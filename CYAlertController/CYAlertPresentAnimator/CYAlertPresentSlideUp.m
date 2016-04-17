@@ -29,7 +29,7 @@
           initialSpringVelocity:0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         toVC.backgroundView.alpha = backgroundAlpha;
+                         toVC.backgroundView.alpha = cy_backgroundAlpha;
                          toVC.alertView.center = toVC.view.center;
                      }
                      completion:^(BOOL finished) {

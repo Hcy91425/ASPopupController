@@ -26,7 +26,7 @@
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     [UIView animateWithDuration:duration
                      animations:^{
-                         toVC.backgroundView.alpha = backgroundAlpha;
+                         toVC.backgroundView.alpha = cy_backgroundAlpha;
                          toVC.alertView.alpha = 1;
                          toVC.alertView.transform = CGAffineTransformIdentity;
                      }
