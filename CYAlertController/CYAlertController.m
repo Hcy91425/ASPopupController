@@ -45,7 +45,7 @@
         // 灰色半透明背景
         _backgroundView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         _backgroundView.backgroundColor = [UIColor blackColor];
-        _backgroundView.alpha = backgroundAlpha;
+        _backgroundView.alpha = cy_backgroundAlpha;
     }
     return self;
 }

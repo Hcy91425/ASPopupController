@@ -12,9 +12,7 @@
 @class CYAlertView;
 
 /** 灰色背景透明度 */
-static const CGFloat backgroundAlpha = 0.4;
-
-typedef void (^ _Nullable EmptyBlock) ();
+static const CGFloat cy_backgroundAlpha = 0.4;
 
 /** present style */
 typedef NS_ENUM(NSInteger, CYAlertPresentStyle) {

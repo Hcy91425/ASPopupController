@@ -85,14 +85,12 @@ const static CGFloat buttonHeight = 40.0;
     _titleLabel.textAlignment = NSTextAlignmentCenter;
     _titleLabel.numberOfLines = 0;
     _titleLabel.font = [UIFont boldSystemFontOfSize:17.0];
-    _titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
     
     // 设置 messageLabel
     _messageLabel.text = message;
     _messageLabel.textAlignment = NSTextAlignmentCenter;
     _messageLabel.numberOfLines = 0;
     _messageLabel.font = [UIFont systemFontOfSize:13.0];
-    _messageLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
     // 添加约束 titleLabel
     CGFloat titleHeight = [title cy_heightWithWidth:containerWidth andFont:_titleLabel.font] + 1;
@@ -178,14 +176,11 @@ const static CGFloat buttonHeight = 40.0;
     
     // 根据调用次数的不同，来布局
     switch (_buttons.count) {
-        case 1:
-            [self layoutForSingleButton];
-            break;
         case 2:
-            [self layoutForDoubleButton];
+            [self layoutButtonsHorizontal];
             break;
         default:
-            [self layoutForMultipleButton];
+            [self layoutButtonsVertical];
             break;
     }
 }
@@ -205,25 +200,8 @@ const static CGFloat buttonHeight = 40.0;
     }
 }
 
-/** 一个 button 时的布局 */
-- (void)layoutForSingleButton {
-    UIButton *button = _buttons[0];
-    
-    [button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(buttonHeight);                          // 高度
-        make.left.right.equalTo(self);                                  // 左右对齐
-        make.top.equalTo(_containerView.mas_bottom).offset(0.5);        // 距离上方 containerView 0.5
-    }];
-    
-    // 更新底部的约束
-    [self mas_makeConstraints:^(MASConstraintMaker *make) {
-        [_bottomConstraint uninstall];  // 删除之前底部的约束
-        _bottomConstraint = make.bottom.equalTo(button);
-    }];
-}
-
-/** 两个 button 时的布局 */
-- (void)layoutForDoubleButton {
+/** 两个 button 时的水平布局 */
+- (void)layoutButtonsHorizontal {
     UIButton *leftButton = _buttons[0];
     UIButton *rightButton = _buttons[1];
     
@@ -244,8 +222,8 @@ const static CGFloat buttonHeight = 40.0;
     }];
 }
 
-/** 多个 button 时的布局 */
-- (void)layoutForMultipleButton {
+/** 垂直布局 */
+- (void)layoutButtonsVertical {
     
     // 记录最下面的一个view
     __block UIView *lastView;
@@ -267,7 +245,7 @@ const static CGFloat buttonHeight = 40.0;
     
     // 更新 alert 底部约束
     [self mas_makeConstraints:^(MASConstraintMaker *make) {
-        [_bottomConstraint uninstall];
+        [_bottomConstraint uninstall];  // 删除旧的底部约束
         _bottomConstraint = make.bottom.equalTo(lastView);
     }];
 }

@@ -30,7 +30,7 @@
           initialSpringVelocity:0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         toVC.backgroundView.alpha = backgroundAlpha;
+                         toVC.backgroundView.alpha = cy_backgroundAlpha;
                          toVC.alertView.alpha = 1;
                          toVC.alertView.transform = CGAffineTransformIdentity;
                      }
