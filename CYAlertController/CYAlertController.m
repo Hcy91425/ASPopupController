@@ -8,7 +8,6 @@
 
 #import "CYAlertController.h"
 #import "CYAlertView.h"
-#import "Masonry.h"
 
 // Present
 #import "CYAlertPresentSystem.h"
@@ -59,10 +58,20 @@
     [self.view addSubview:_alertView];
 
     // 设置 alertView 在屏幕中心
-    [_alertView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
-    }];
-
+    [NSLayoutConstraint constraintWithItem:_alertView
+                                 attribute:NSLayoutAttributeCenterX
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self.view
+                                 attribute:NSLayoutAttributeCenterX
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_alertView
+                                 attribute:NSLayoutAttributeCenterY
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self.view
+                                 attribute:NSLayoutAttributeCenterY
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
 }
 
 /** 添加 action */

@@ -9,7 +9,6 @@
 #import "CYAlertView.h"
 #import "CYAlertAction.h"
 #import "NSString+Size.h"
-#import "Masonry.h"
 
 /** 间隙 */
 const static CGFloat padding = 15.0;
@@ -42,9 +41,6 @@ const static CGFloat buttonHeight = 40.0;
 
 /** 消息 */
 @property (nonatomic, strong)UILabel *messageLabel;
-
-/** 保存alert底部的约束，添加button要改变这个约束 */
-@property (nonatomic, strong)MASConstraint *bottomConstraint;
 
 /** 按钮白色背景 */
 @property (nonatomic, strong)UIImage *whiteImage;
@@ -129,41 +125,169 @@ const static CGFloat buttonHeight = 40.0;
     
     // 添加约束 titleLabel
     CGFloat titleHeight = [title cy_heightWithWidth:containerWidth andFont:_titleLabel.font] + 1;
-    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(containerWidth);                     // 宽
-        make.height.mas_equalTo(titleHeight);                       // 高
-        make.bottom.equalTo(_messageLabel.mas_top).offset(-15);     // 底部距离message顶部 15
-        make.left.top.right.equalTo(_scrollView);                   // 上，左，右距离scrollView 15
-    }];
+    _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint constraintWithItem:_titleLabel
+                                 attribute:NSLayoutAttributeWidth
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:containerWidth].active = YES;
+    [NSLayoutConstraint constraintWithItem:_titleLabel
+                                 attribute:NSLayoutAttributeHeight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:titleHeight].active = YES;
+    [NSLayoutConstraint constraintWithItem:_titleLabel
+                                 attribute:NSLayoutAttributeBottom
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_messageLabel
+                                 attribute:NSLayoutAttributeTop
+                                multiplier:1.0
+                                  constant:-padding].active = YES;
+    [NSLayoutConstraint constraintWithItem:_titleLabel attribute:NSLayoutAttributeTop
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_scrollView
+                                 attribute:NSLayoutAttributeTop
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_titleLabel attribute:NSLayoutAttributeLeft
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_scrollView
+                                 attribute:NSLayoutAttributeLeft
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_titleLabel attribute:NSLayoutAttributeRight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_scrollView
+                                 attribute:NSLayoutAttributeRight
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
     
     // 添加约束 messageLabel
     CGFloat messageHeight = [message cy_heightWithWidth:containerWidth andFont:_messageLabel.font] + 1;
-    [_messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(containerWidth);                     // 宽
-        make.height.mas_equalTo(messageHeight);                     // 高
-        make.left.right.bottom.equalTo(_scrollView);                // 左，右，下距离scrollView 15
-    }];
+    _messageLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint constraintWithItem:_messageLabel
+                                 attribute:NSLayoutAttributeWidth
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:containerWidth].active = YES;
+    [NSLayoutConstraint constraintWithItem:_messageLabel
+                                 attribute:NSLayoutAttributeHeight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:messageHeight].active = YES;
+    [NSLayoutConstraint constraintWithItem:_messageLabel
+                                 attribute:NSLayoutAttributeLeft
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_scrollView
+                                 attribute:NSLayoutAttributeLeft
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_messageLabel
+                                 attribute:NSLayoutAttributeBottom
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_scrollView
+                                 attribute:NSLayoutAttributeBottom
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_messageLabel
+                                 attribute:NSLayoutAttributeRight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_scrollView
+                                 attribute:NSLayoutAttributeRight
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
     
     // 添加约束 scrollView
     CGFloat scrollViewHeight = titleHeight+messageHeight+padding;
-    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(containerWidth);                         // 宽度等于 containerWidth
-        make.height.mas_equalTo(scrollViewHeight).priorityLow();        // 高度，因为还要小于等于450，所以设置低优先级
-        UIEdgeInsets edges = UIEdgeInsetsMake(15, 15, 15, 15);
-        make.edges.equalTo(_containerView).insets(edges);               // 与 containerView 的边缘距离 15
-    }];
+    _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint constraintWithItem:_scrollView
+                                 attribute:NSLayoutAttributeWidth
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:containerWidth].active = YES;
+    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:_scrollView
+                                 attribute:NSLayoutAttributeHeight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:scrollViewHeight];
+    heightConstraint.priority = UILayoutPriorityDefaultLow;
+    heightConstraint.active = YES;
+    [NSLayoutConstraint constraintWithItem:_scrollView
+                                 attribute:NSLayoutAttributeLeft
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_containerView
+                                 attribute:NSLayoutAttributeLeft
+                                multiplier:1.0
+                                  constant:15.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_scrollView
+                                 attribute:NSLayoutAttributeTop
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_containerView
+                                 attribute:NSLayoutAttributeTop
+                                multiplier:1.0
+                                  constant:15.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_scrollView
+                                 attribute:NSLayoutAttributeRight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_containerView
+                                 attribute:NSLayoutAttributeRight
+                                multiplier:1.0
+                                  constant:-15.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_scrollView
+                                 attribute:NSLayoutAttributeBottom
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_containerView
+                                 attribute:NSLayoutAttributeBottom
+                                multiplier:1.0
+                                  constant:-15.0].active = YES;
+
     
     // 添加约束 containerView
-    [_containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.equalTo(self);
-    }];
+    _containerView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint constraintWithItem:_containerView
+                                 attribute:NSLayoutAttributeLeft
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self
+                                 attribute:NSLayoutAttributeLeft
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_containerView
+                                 attribute:NSLayoutAttributeTop
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self
+                                 attribute:NSLayoutAttributeTop
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_containerView
+                                 attribute:NSLayoutAttributeRight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self
+                                 attribute:NSLayoutAttributeRight
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
     
     // 添加约束 self
     CGFloat maxHeight = [UIScreen mainScreen].bounds.size.height - 100.0;
-    [self mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_lessThanOrEqualTo(maxHeight);                       // 整个alert高度不能大于450
-        _bottomConstraint = make.bottom.equalTo(_containerView.mas_bottom); // 底部暂时与scrollView对齐
-    }];
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint constraintWithItem:self
+                                 attribute:NSLayoutAttributeHeight
+                                 relatedBy:NSLayoutRelationLessThanOrEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:maxHeight].active = YES;
     
     return self;
 }
@@ -239,20 +363,75 @@ const static CGFloat buttonHeight = 40.0;
     UIButton *rightButton = self.buttons[1];
     
     // 左边按钮
-    [leftButton mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(buttonHeight);
-        make.left.equalTo(self);
-        make.top.equalTo(_containerView.mas_bottom).offset(0.5);
-    }];
+    leftButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint constraintWithItem:leftButton
+                                 attribute:NSLayoutAttributeHeight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:buttonHeight].active = YES;
+    [NSLayoutConstraint constraintWithItem:leftButton
+                                 attribute:NSLayoutAttributeLeft
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self
+                                 attribute:NSLayoutAttributeLeft
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:leftButton
+                                 attribute:NSLayoutAttributeTop
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_containerView
+                                 attribute:NSLayoutAttributeBottom
+                                multiplier:1.0
+                                  constant:0.5].active = YES;
     
     // 右边按钮
-    [rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(buttonHeight);
-        make.right.equalTo(self);
-        make.top.equalTo(_containerView.mas_bottom).offset(0.5);
-        make.left.equalTo(leftButton.mas_right).offset(0.5);
-        make.width.equalTo(leftButton);
-    }];
+    rightButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint constraintWithItem:rightButton
+                                 attribute:NSLayoutAttributeHeight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:nil
+                                 attribute:NSLayoutAttributeNotAnAttribute
+                                multiplier:1.0
+                                  constant:buttonHeight].active = YES;
+    [NSLayoutConstraint constraintWithItem:rightButton
+                                 attribute:NSLayoutAttributeRight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self
+                                 attribute:NSLayoutAttributeRight
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:rightButton
+                                 attribute:NSLayoutAttributeTop
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_containerView
+                                 attribute:NSLayoutAttributeBottom
+                                multiplier:1.0
+                                  constant:0.5].active = YES;
+    [NSLayoutConstraint constraintWithItem:rightButton
+                                 attribute:NSLayoutAttributeLeft
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:leftButton
+                                 attribute:NSLayoutAttributeRight
+                                multiplier:1.0 constant:0.5].active = YES;
+    [NSLayoutConstraint constraintWithItem:rightButton
+                                 attribute:NSLayoutAttributeWidth
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:leftButton
+                                 attribute:NSLayoutAttributeWidth
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    
+    // 设置 alert 底部约束
+    [NSLayoutConstraint constraintWithItem:self
+                                 attribute:NSLayoutAttributeBottom
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:rightButton
+                                 attribute:NSLayoutAttributeBottom
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+
     
 }
 
@@ -260,28 +439,57 @@ const static CGFloat buttonHeight = 40.0;
 - (void)layoutButtonsVertical {
     
     // 记录最下面的一个view
-    __block UIView *lastView;
+    UIView *lastView;
     
     // 遍历在数组中的button，添加到alert上
     for(UIButton *button in self.buttons) {
-        [button mas_remakeConstraints:^(MASConstraintMaker *make) {
-            // lastView 为空也就是第一个 button 的时候
-            if(!lastView) {
-                lastView = _containerView;
-            }
-            make.left.right.equalTo(self);
-            make.height.mas_equalTo(buttonHeight);
-            make.top.equalTo(lastView.mas_bottom).offset(0.5);
-            
-            lastView = button;
-        }];
+        
+        if(!lastView) {
+            lastView = _containerView;
+        }
+        
+        button.translatesAutoresizingMaskIntoConstraints = NO;
+        [NSLayoutConstraint constraintWithItem:button
+                                     attribute:NSLayoutAttributeLeft
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self
+                                     attribute:NSLayoutAttributeLeft
+                                    multiplier:1.0
+                                      constant:0.0].active = YES;
+        [NSLayoutConstraint constraintWithItem:button
+                                     attribute:NSLayoutAttributeRight
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self
+                                     attribute:NSLayoutAttributeRight
+                                    multiplier:1.0
+                                      constant:0.0].active = YES;
+        [NSLayoutConstraint constraintWithItem:button
+                                     attribute:NSLayoutAttributeHeight
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:nil
+                                     attribute:NSLayoutAttributeNotAnAttribute
+                                    multiplier:1.0
+                                      constant:buttonHeight].active = YES;
+        [NSLayoutConstraint constraintWithItem:button
+                                     attribute:NSLayoutAttributeTop
+                                     relatedBy:NSLayoutRelationEqual
+                                         toItem:lastView
+                                     attribute:NSLayoutAttributeBottom
+                                     multiplier:1.0
+                                     constant:0.5].active = YES;
+        
+        lastView = button;
+
     }
     
-    // 更新 alert 底部约束
-    [_bottomConstraint uninstall];  // 删除旧的底部约束
-    [self mas_makeConstraints:^(MASConstraintMaker *make) {
-        _bottomConstraint = make.bottom.equalTo(lastView);
-    }];
+    // 设置 alert 底部约束
+    [NSLayoutConstraint constraintWithItem:self
+                                 attribute:NSLayoutAttributeBottom
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:lastView
+                                 attribute:NSLayoutAttributeBottom
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
 }
 
 @end
