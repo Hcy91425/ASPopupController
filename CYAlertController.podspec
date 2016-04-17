@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CYAlertController"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "高仿系统 alert controller，提供多种转场动画"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   高仿系统 alert controller，提供多种转场动画，使用Masonry自动布局
+                   高仿系统 alert controller，提供多种转场动画。
                    DESC
 
   s.homepage     = "https://github.com/Hcy91425/CYAlertController"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Hcy91425/CYAlertController.git", :tag => "1.0.1" }
+  s.source       = { :git => "https://github.com/Hcy91425/CYAlertController.git", :tag => "1.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -133,6 +133,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency 'Masonry'
+  # s.dependency 'Masonry'
 
 end
