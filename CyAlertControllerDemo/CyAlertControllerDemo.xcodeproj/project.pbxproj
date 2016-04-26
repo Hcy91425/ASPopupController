@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2705689A1CBDD53D00DB2D6A /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 270568721CBDD53D00DB2D6A /* NSString+Size.m */; };
 		2705689B1CBDD53D00DB2D6A /* CYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270568741CBDD53D00DB2D6A /* CYAlertController.m */; };
 		2705689C1CBDD53D00DB2D6A /* CYAlertDismissContractHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = 270568771CBDD53D00DB2D6A /* CYAlertDismissContractHorizontal.m */; };
 		2705689D1CBDD53D00DB2D6A /* CYAlertDismissContractVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 270568791CBDD53D00DB2D6A /* CYAlertDismissContractVertical.m */; };
@@ -37,8 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		270568711CBDD53D00DB2D6A /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
-		270568721CBDD53D00DB2D6A /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		270568731CBDD53D00DB2D6A /* CYAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertController.h; sourceTree = "<group>"; };
 		270568741CBDD53D00DB2D6A /* CYAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAlertController.m; sourceTree = "<group>"; };
 		270568761CBDD53D00DB2D6A /* CYAlertDismissContractHorizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAlertDismissContractHorizontal.h; sourceTree = "<group>"; };
@@ -106,22 +103,12 @@
 			children = (
 				270568731CBDD53D00DB2D6A /* CYAlertController.h */,
 				270568741CBDD53D00DB2D6A /* CYAlertController.m */,
-				270568701CBDD53D00DB2D6A /* Category */,
 				270568751CBDD53D00DB2D6A /* CYAlertDismissAnimator */,
 				270568841CBDD53D00DB2D6A /* CYAlertPresentAnimator */,
 				270568971CBDD53D00DB2D6A /* CYAlertView */,
 			);
 			name = CYAlertController;
 			path = ../../CYAlertController;
-			sourceTree = "<group>";
-		};
-		270568701CBDD53D00DB2D6A /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				270568711CBDD53D00DB2D6A /* NSString+Size.h */,
-				270568721CBDD53D00DB2D6A /* NSString+Size.m */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 		270568751CBDD53D00DB2D6A /* CYAlertDismissAnimator */ = {
@@ -302,7 +289,6 @@
 				270568A71CBDD53D00DB2D6A /* CYAlertPresentSlideDown.m in Sources */,
 				270568A81CBDD53D00DB2D6A /* CYAlertPresentSlideLeft.m in Sources */,
 				2705689E1CBDD53D00DB2D6A /* CYAlertDismissFadeOut.m in Sources */,
-				2705689A1CBDD53D00DB2D6A /* NSString+Size.m in Sources */,
 				270568A51CBDD53D00DB2D6A /* CYAlertPresentExpandVertical.m in Sources */,
 				27C6B2021CA6D4D600DA47B3 /* DemoViewController.m in Sources */,
 				270568A91CBDD53D00DB2D6A /* CYAlertPresentSlideRight.m in Sources */,

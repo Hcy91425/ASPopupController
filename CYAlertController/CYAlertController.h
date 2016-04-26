@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, CYAlertPresentStyle) {
     CYAlertPresentStyleSlideUp,         // 从下往上划入
     CYAlertPresentStyleSlideLeft,       // 从右往左划入
     CYAlertPresentStyleSlideRight,      // 从左往右划入
+    CYAlertPresentStyleFlipHorizontal   // 水平翻转
 };
 
 /** dismiss style */

@@ -8,7 +8,6 @@
 
 #import "CYAlertView.h"
 #import "CYAlertAction.h"
-#import "NSString+Size.h"
 
 /** 间隙 */
 const static CGFloat padding = 15.0;
@@ -124,7 +123,6 @@ const static CGFloat buttonHeight = 40.0;
     _messageLabel.font = [UIFont systemFontOfSize:13.0];
     
     // 添加约束 titleLabel
-    CGFloat titleHeight = [title cy_heightWithWidth:containerWidth andFont:_titleLabel.font] + 1;
     _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint constraintWithItem:_titleLabel
                                  attribute:NSLayoutAttributeWidth
@@ -133,13 +131,6 @@ const static CGFloat buttonHeight = 40.0;
                                  attribute:NSLayoutAttributeNotAnAttribute
                                 multiplier:1.0
                                   constant:containerWidth].active = YES;
-    [NSLayoutConstraint constraintWithItem:_titleLabel
-                                 attribute:NSLayoutAttributeHeight
-                                 relatedBy:NSLayoutRelationEqual
-                                    toItem:nil
-                                 attribute:NSLayoutAttributeNotAnAttribute
-                                multiplier:1.0
-                                  constant:titleHeight].active = YES;
     [NSLayoutConstraint constraintWithItem:_titleLabel
                                  attribute:NSLayoutAttributeBottom
                                  relatedBy:NSLayoutRelationEqual
@@ -167,7 +158,6 @@ const static CGFloat buttonHeight = 40.0;
                                   constant:0.0].active = YES;
     
     // 添加约束 messageLabel
-    CGFloat messageHeight = [message cy_heightWithWidth:containerWidth andFont:_messageLabel.font] + 1;
     _messageLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint constraintWithItem:_messageLabel
                                  attribute:NSLayoutAttributeWidth
@@ -176,13 +166,6 @@ const static CGFloat buttonHeight = 40.0;
                                  attribute:NSLayoutAttributeNotAnAttribute
                                 multiplier:1.0
                                   constant:containerWidth].active = YES;
-    [NSLayoutConstraint constraintWithItem:_messageLabel
-                                 attribute:NSLayoutAttributeHeight
-                                 relatedBy:NSLayoutRelationEqual
-                                    toItem:nil
-                                 attribute:NSLayoutAttributeNotAnAttribute
-                                multiplier:1.0
-                                  constant:messageHeight].active = YES;
     [NSLayoutConstraint constraintWithItem:_messageLabel
                                  attribute:NSLayoutAttributeLeft
                                  relatedBy:NSLayoutRelationEqual
@@ -206,7 +189,8 @@ const static CGFloat buttonHeight = 40.0;
                                   constant:0.0].active = YES;
     
     // 添加约束 scrollView
-    CGFloat scrollViewHeight = titleHeight+messageHeight+padding;
+//    CGFloat scrollViewHeight = titleHeight+messageHeight+padding;
+    CGFloat scrollViewHeight = [_titleLabel sizeThatFits:CGSizeMake(containerWidth, 0)].height+[_messageLabel sizeThatFits:CGSizeMake(containerWidth, 0)].height+padding;
     _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint constraintWithItem:_scrollView
                                  attribute:NSLayoutAttributeWidth
@@ -354,6 +338,10 @@ const static CGFloat buttonHeight = 40.0;
     }
     [super updateConstraints];
     
+}
+
++ (BOOL)requiresConstraintBasedLayout {
+    return YES;
 }
 
 /** 两个 button 时的水平布局 */
