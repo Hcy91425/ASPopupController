@@ -42,7 +42,8 @@
         self.modalPresentationStyle = UIModalPresentationCustom;    // 自定义转场模式
         
         // 灰色半透明背景
-        _backgroundView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        _backgroundView = [[UIView alloc] init];
+        _backgroundView.translatesAutoresizingMaskIntoConstraints = NO;
         _backgroundView.backgroundColor = [UIColor blackColor];
         _backgroundView.alpha = cy_backgroundAlpha;
     }
@@ -56,6 +57,40 @@
     
     [self.view addSubview:_backgroundView];
     [self.view addSubview:_alertView];
+    
+    // 设置灰色半透明背景的约束
+    [NSLayoutConstraint constraintWithItem:_backgroundView
+                                 attribute:NSLayoutAttributeLeft
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self.view
+                                 attribute:NSLayoutAttributeLeft
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+    
+    [NSLayoutConstraint constraintWithItem:_backgroundView
+                                 attribute:NSLayoutAttributeRight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self.view
+                                 attribute:NSLayoutAttributeRight
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+
+    [NSLayoutConstraint constraintWithItem:_backgroundView
+                                 attribute:NSLayoutAttributeTop
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self.view
+                                 attribute:NSLayoutAttributeTop
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+
+    [NSLayoutConstraint constraintWithItem:_backgroundView
+                                 attribute:NSLayoutAttributeBottom
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self.view
+                                 attribute:NSLayoutAttributeBottom
+                                multiplier:1.0
+                                  constant:0.0].active = YES;
+
 
     // 设置 alertView 在屏幕中心
     [NSLayoutConstraint constraintWithItem:_alertView
