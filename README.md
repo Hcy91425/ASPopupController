@@ -1,8 +1,11 @@
+#### 2016.11.02 更新
+更换了所有类名前缀为 AS， 修改了项目名称为 ASPopupController。
+理由：CY 长的不好看，逼格不高😬
 #### 2016.10.30 更新
 1. 修复了在屏幕旋转时灰色半透明背景没有约束的bug。
 2. 最近工作比较忙，自己也升入大四了，还要准备毕设和毕业的事情，太久没有更新自己的Github了。目前只能简单的修复一下小bug，有空的时候准备一波大更新，敬请期待🤔
 
-## CYAlertController
+## ASPopupController
 ***
 一个初学者的第一次尝试。喜欢的，支持的，欢迎 star⭐️，fork。没有很多经验，很多东西都是自己的思路，如果有不对的地方希望大家能够指出。
 
@@ -30,32 +33,32 @@
 #### 导入
 
 ```
-pod 'CYAlertController'
+pod 'ASPopupController'
 ```
 
-也可以直接往项目中拖入 `CYAlertController` 文件夹到你的项目中
+也可以直接往项目中拖入 `ASPopupController` 文件夹到你的项目中
 
 然后在需要使用的地方导入头文件
 
 ```objc
-#import "CYAlertController.h"
+#import "ASPopupController.h"
 ```
 
 #### 调用
 
-CYAlertController 提供了几乎与官方一样的API：
+ASPopupController 提供了几乎与官方一样的API：
 
 ```objc
-CYAlertController *alert = [CYAlertController alertWithTitle:@"警告！警告！💥"
+ASPopupController *alert = [ASPopupController alertWithTitle:@"警告！警告！💥"
                                                      message:@"逗你玩儿呢 ~ 😜"];
-alert.presentStyle = CYAlertPresentStyleSystem;
-alert.dismissStyle = CYAlertDismissStyleFadeOut;
+alert.presentStyle = ASPopupPresentStyleSystem;
+alert.dismissStyle = ASPopupDismissStyleFadeOut;
 
 // 或者直接一口气初始化
-CYAlertController *alert2 = [CYAlertController alertWithTitle:@"警告！警告！💥"
+ASPopupController *alert2 = [ASPopupController alertWithTitle:@"警告！警告！💥"
                                                       message:@"逗你玩儿呢 ~ 😜"
-                                                 presentStyle:CYAlertPresentStyleSystem
-                                                 dismissStyle:CYAlertDismissStyleFadeOut];
+                                                 presentStyle:ASPopupPresentStyleSystem
+                                                 dismissStyle:ASPopupDismissStyleFadeOut];
                                                  
 // 还可以设置 alertView 的圆角半径，默认为6
 alert.alertViewCornerRadius = 10;
@@ -64,9 +67,9 @@ alert.alertViewCornerRadius = 10;
 创建 action(提供了3中与官方一样的style)，给 alert 添加 action ：
 
 ```objc
-CYAlertAction *defaultAction = [CYAlertAction actionWithTitle:@"确定" style:CYAlertActionStyleDefault handler:^{ NSLog(@"Default"); }];
-CYAlertAction *destructiveAction = [CYAlertAction actionWithTitle:@"危险" style:CYAlertActionStyleDestructive handler:^{ NSLog(@"Destructive"); }];
-CYAlertAction *cancelAction = [CYAlertAction actionWithTitle:@"取消" style:CYAlertActionStyleCancel handler:^{ NSLog(@"Cancel"); }];
+ASPopupAction *defaultAction = [ASPopupAction actionWithTitle:@"确定" style:ASPopupActionStyleDefault handler:^{ NSLog(@"Default"); }];
+ASPopupAction *destructiveAction = [ASPopupAction actionWithTitle:@"危险" style:ASPopupActionStyleDestructive handler:^{ NSLog(@"Destructive"); }];
+ASPopupAction *cancelAction = [ASPopupAction actionWithTitle:@"取消" style:ASPopupActionStyleCancel handler:^{ NSLog(@"Cancel"); }];
 
 // 一次性添加
 [alert addActions:@[defaultAction, destructiveAction, cancelAction]];
@@ -91,27 +94,27 @@ CYAlertAction *cancelAction = [CYAlertAction actionWithTitle:@"取消" style:CYA
 
 ```objc
 // present style
-typedef NS_ENUM(NSInteger, CYAlertPresentStyle) {
-    CYAlertPresentStyleSystem,          // 系统样式
-    CYAlertPresentStyleFadeIn,          // 渐入
-    CYAlertPresentStyleBounce,          // 弹出
-    CYAlertPresentStyleExpandHorizontal,// 水平展开
-    CYAlertPresentStyleExpandVertical,  // 垂直展开
-    CYAlertPresentStyleSlideDown,       // 从上往下划入
-    CYAlertPresentStyleSlideUp,         // 从下往上划入
-    CYAlertPresentStyleSlideLeft,       // 从右往左划入
-    CYAlertPresentStyleSlideRight,      // 从左往右划入
+typedef NS_ENUM(NSInteger, ASPopupPresentStyle) {
+    ASPopupPresentStyleSystem,          // 系统样式
+    ASPopupPresentStyleFadeIn,          // 渐入
+    ASPopupPresentStyleBounce,          // 弹出
+    ASPopupPresentStyleExpandHorizontal,// 水平展开
+    ASPopupPresentStyleExpandVertical,  // 垂直展开
+    ASPopupPresentStyleSlideDown,       // 从上往下划入
+    ASPopupPresentStyleSlideUp,         // 从下往上划入
+    ASPopupPresentStyleSlideLeft,       // 从右往左划入
+    ASPopupPresentStyleSlideRight,      // 从左往右划入
 };
 
 // dismiss style
-typedef NS_ENUM(NSInteger, CYAlertDismissStyle) {
-    CYAlertDismissStyleFadeOut,             // 渐出
-    CYAlertDismissStyleContractHorizontal,  // 水平收起
-    CYAlertDismissStyleContractVertical,    // 垂直收起
-    CYAlertDismissStyleSlideDown,           // 向下划出
-    CYAlertDismissStyleSlideUp,             // 向上划出
-    CYAlertDismissStyleSlideLeft,           // 向左划出
-    CYAlertDismissStyleSlideRight,          // 向右划出
+typedef NS_ENUM(NSInteger, ASPopupDismissStyle) {
+    ASPopupDismissStyleFadeOut,             // 渐出
+    ASPopupDismissStyleContractHorizontal,  // 水平收起
+    ASPopupDismissStyleContractVertical,    // 垂直收起
+    ASPopupDismissStyleSlideDown,           // 向下划出
+    ASPopupDismissStyleSlideUp,             // 向上划出
+    ASPopupDismissStyleSlideLeft,           // 向左划出
+    ASPopupDismissStyleSlideRight,          // 向右划出
 };
 ```
 
