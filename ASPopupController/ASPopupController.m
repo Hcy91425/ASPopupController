@@ -10,24 +10,10 @@
 #import "ASPopupView.h"
 
 // Present
-#import "ASPopupPresentSystem.h"
-#import "ASPopupPresentFadeIn.h"
-#import "ASPopupPresentBounce.h"
-#import "ASPopupPresentExpandHorizontal.h"
-#import "ASPopupPresentExpandVertical.h"
-#import "ASPopupPresentSlideDown.h"
-#import "ASPopupPresentSlideUp.h"
-#import "ASPopupPresentSlideLeft.h"
-#import "ASPopupPresentSlideRight.h"
+#import "ASPopupPresentAnimator.h"
 
 // Dismiss
-#import "ASPopupDismissFadeOut.h"
-#import "ASPopupDismissContractHorizontal.h"
-#import "ASPopupDismissContractVertical.h"
-#import "ASPopupDismissSlideDown.h"
-#import "ASPopupDismissSlideUp.h"
-#import "ASPopupDismissSlideLeft.h"
-#import "ASPopupDismissSlideRight.h"
+#import "ASPopupDismissAnimator.h"
 
 
 @interface ASPopupController ()<UIViewControllerTransitioningDelegate>
@@ -161,61 +147,16 @@
 /** 返回Present动画 */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     
-    switch (_presentStyle) {
-        case ASPopupPresentStyleFadeIn:
-            return [[ASPopupPresentFadeIn alloc] init];
-            break;
-        case ASPopupPresentStyleBounce:
-            return [[ASPopupPresentBounce alloc] init];
-            break;
-        case ASPopupPresentStyleExpandHorizontal:
-            return [[ASPopupPresentExpandHorizontal alloc] init];
-            break;
-        case ASPopupPresentStyleExpandVertical:
-            return [[ASPopupPresentExpandVertical alloc] init];
-            break;
-        case ASPopupPresentStyleSlideDown:
-            return [[ASPopupPresentSlideDown alloc] init];
-            break;
-        case ASPopupPresentStyleSlideUp:
-            return [[ASPopupPresentSlideUp alloc] init];
-            break;
-        case ASPopupPresentStyleSlideLeft:
-            return [[ASPopupPresentSlideLeft alloc] init];
-            break;
-        case ASPopupPresentStyleSlideRight:
-            return [[ASPopupPresentSlideRight alloc] init];
-        default:
-            return [[ASPopupPresentSystem alloc] init];
-            break;
-    }
+    ASPopupPresentAnimator *animator = [[ASPopupPresentAnimator alloc] init];
+    animator.presentStyle = self.presentStyle;
+    return animator;
 }
 
 /** 返回Dismiss动画 */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    switch (_dismissStyle) {
-        case ASPopupDismissStyleContractHorizontal:
-            return [[ASPopupDismissContractHorizontal alloc] init];
-            break;
-        case ASPopupDismissStyleContractVertical:
-            return [[ASPopupDismissContractVertical alloc] init];
-            break;
-        case ASPopupDismissStyleSlideDown:
-            return [[ASPopupDismissSlideDown alloc] init];
-            break;
-        case ASPopupDismissStyleSlideUp:
-            return [[ASPopupDismissSlideUp alloc] init];
-            break;
-        case ASPopupDismissStyleSlideLeft:
-            return [[ASPopupDismissSlideLeft alloc] init];
-            break;
-        case ASPopupDismissStyleSlideRight:
-            return [[ASPopupDismissSlideRight alloc] init];
-            break;
-        default:
-            return [[ASPopupDismissFadeOut alloc] init];
-            break;
-    }
+    ASPopupDismissAnimator *animator = [[ASPopupDismissAnimator alloc] init];
+    animator.dismissStyle = self.dismissStyle;
+    return animator;
 }
 
 @end

@@ -14,25 +14,11 @@
 		272A147B1DCA3EDD008A1CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272A14791DCA3EDD008A1CBF /* LaunchScreen.storyboard */; };
 		272A14841DCA3EFA008A1CBF /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14831DCA3EFA008A1CBF /* DemoViewController.m */; };
 		272A14B01DCA3F04008A1CBF /* ASPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14871DCA3F04008A1CBF /* ASPopupController.m */; };
-		272A14B11DCA3F04008A1CBF /* ASPopupDismissContractHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A148A1DCA3F04008A1CBF /* ASPopupDismissContractHorizontal.m */; };
-		272A14B21DCA3F04008A1CBF /* ASPopupDismissContractVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A148C1DCA3F04008A1CBF /* ASPopupDismissContractVertical.m */; };
-		272A14B31DCA3F04008A1CBF /* ASPopupDismissFadeOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A148E1DCA3F04008A1CBF /* ASPopupDismissFadeOut.m */; };
-		272A14B41DCA3F04008A1CBF /* ASPopupDismissSlideDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14901DCA3F04008A1CBF /* ASPopupDismissSlideDown.m */; };
-		272A14B51DCA3F04008A1CBF /* ASPopupDismissSlideLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14921DCA3F04008A1CBF /* ASPopupDismissSlideLeft.m */; };
-		272A14B61DCA3F04008A1CBF /* ASPopupDismissSlideRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14941DCA3F04008A1CBF /* ASPopupDismissSlideRight.m */; };
-		272A14B71DCA3F04008A1CBF /* ASPopupDismissSlideUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14961DCA3F04008A1CBF /* ASPopupDismissSlideUp.m */; };
-		272A14B81DCA3F04008A1CBF /* ASPopupPresentBounce.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14991DCA3F04008A1CBF /* ASPopupPresentBounce.m */; };
-		272A14B91DCA3F04008A1CBF /* ASPopupPresentExpandHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A149B1DCA3F04008A1CBF /* ASPopupPresentExpandHorizontal.m */; };
-		272A14BA1DCA3F04008A1CBF /* ASPopupPresentExpandVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A149D1DCA3F04008A1CBF /* ASPopupPresentExpandVertical.m */; };
-		272A14BB1DCA3F04008A1CBF /* ASPopupPresentFadeIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A149F1DCA3F04008A1CBF /* ASPopupPresentFadeIn.m */; };
-		272A14BC1DCA3F04008A1CBF /* ASPopupPresentSlideDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14A11DCA3F04008A1CBF /* ASPopupPresentSlideDown.m */; };
-		272A14BD1DCA3F04008A1CBF /* ASPopupPresentSlideLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14A31DCA3F04008A1CBF /* ASPopupPresentSlideLeft.m */; };
-		272A14BE1DCA3F04008A1CBF /* ASPopupPresentSlideRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14A51DCA3F04008A1CBF /* ASPopupPresentSlideRight.m */; };
-		272A14BF1DCA3F04008A1CBF /* ASPopupPresentSlideUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14A71DCA3F04008A1CBF /* ASPopupPresentSlideUp.m */; };
-		272A14C01DCA3F04008A1CBF /* ASPopupPresentSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14A91DCA3F04008A1CBF /* ASPopupPresentSystem.m */; };
 		272A14C11DCA3F04008A1CBF /* ASPopupAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14AC1DCA3F04008A1CBF /* ASPopupAction.m */; };
 		272A14C21DCA3F04008A1CBF /* ASPopupController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 272A14AD1DCA3F04008A1CBF /* ASPopupController.bundle */; };
 		272A14C31DCA3F04008A1CBF /* ASPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A14AF1DCA3F04008A1CBF /* ASPopupView.m */; };
+		27FF06071DCB7CFD009B22BF /* ASPopupPresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF06061DCB7CFD009B22BF /* ASPopupPresentAnimator.m */; };
+		27FF060B1DCB82EB009B22BF /* ASPopupDismissAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF060A1DCB82EB009B22BF /* ASPopupDismissAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,43 +34,16 @@
 		272A14831DCA3EFA008A1CBF /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		272A14861DCA3F04008A1CBF /* ASPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupController.h; sourceTree = "<group>"; };
 		272A14871DCA3F04008A1CBF /* ASPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupController.m; sourceTree = "<group>"; };
-		272A14891DCA3F04008A1CBF /* ASPopupDismissContractHorizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupDismissContractHorizontal.h; sourceTree = "<group>"; };
-		272A148A1DCA3F04008A1CBF /* ASPopupDismissContractHorizontal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupDismissContractHorizontal.m; sourceTree = "<group>"; };
-		272A148B1DCA3F04008A1CBF /* ASPopupDismissContractVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupDismissContractVertical.h; sourceTree = "<group>"; };
-		272A148C1DCA3F04008A1CBF /* ASPopupDismissContractVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupDismissContractVertical.m; sourceTree = "<group>"; };
-		272A148D1DCA3F04008A1CBF /* ASPopupDismissFadeOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupDismissFadeOut.h; sourceTree = "<group>"; };
-		272A148E1DCA3F04008A1CBF /* ASPopupDismissFadeOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupDismissFadeOut.m; sourceTree = "<group>"; };
-		272A148F1DCA3F04008A1CBF /* ASPopupDismissSlideDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupDismissSlideDown.h; sourceTree = "<group>"; };
-		272A14901DCA3F04008A1CBF /* ASPopupDismissSlideDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupDismissSlideDown.m; sourceTree = "<group>"; };
-		272A14911DCA3F04008A1CBF /* ASPopupDismissSlideLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupDismissSlideLeft.h; sourceTree = "<group>"; };
-		272A14921DCA3F04008A1CBF /* ASPopupDismissSlideLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupDismissSlideLeft.m; sourceTree = "<group>"; };
-		272A14931DCA3F04008A1CBF /* ASPopupDismissSlideRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupDismissSlideRight.h; sourceTree = "<group>"; };
-		272A14941DCA3F04008A1CBF /* ASPopupDismissSlideRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupDismissSlideRight.m; sourceTree = "<group>"; };
-		272A14951DCA3F04008A1CBF /* ASPopupDismissSlideUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupDismissSlideUp.h; sourceTree = "<group>"; };
-		272A14961DCA3F04008A1CBF /* ASPopupDismissSlideUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupDismissSlideUp.m; sourceTree = "<group>"; };
-		272A14981DCA3F04008A1CBF /* ASPopupPresentBounce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupPresentBounce.h; sourceTree = "<group>"; };
-		272A14991DCA3F04008A1CBF /* ASPopupPresentBounce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupPresentBounce.m; sourceTree = "<group>"; };
-		272A149A1DCA3F04008A1CBF /* ASPopupPresentExpandHorizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupPresentExpandHorizontal.h; sourceTree = "<group>"; };
-		272A149B1DCA3F04008A1CBF /* ASPopupPresentExpandHorizontal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupPresentExpandHorizontal.m; sourceTree = "<group>"; };
-		272A149C1DCA3F04008A1CBF /* ASPopupPresentExpandVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupPresentExpandVertical.h; sourceTree = "<group>"; };
-		272A149D1DCA3F04008A1CBF /* ASPopupPresentExpandVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupPresentExpandVertical.m; sourceTree = "<group>"; };
-		272A149E1DCA3F04008A1CBF /* ASPopupPresentFadeIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupPresentFadeIn.h; sourceTree = "<group>"; };
-		272A149F1DCA3F04008A1CBF /* ASPopupPresentFadeIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupPresentFadeIn.m; sourceTree = "<group>"; };
-		272A14A01DCA3F04008A1CBF /* ASPopupPresentSlideDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupPresentSlideDown.h; sourceTree = "<group>"; };
-		272A14A11DCA3F04008A1CBF /* ASPopupPresentSlideDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupPresentSlideDown.m; sourceTree = "<group>"; };
-		272A14A21DCA3F04008A1CBF /* ASPopupPresentSlideLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupPresentSlideLeft.h; sourceTree = "<group>"; };
-		272A14A31DCA3F04008A1CBF /* ASPopupPresentSlideLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupPresentSlideLeft.m; sourceTree = "<group>"; };
-		272A14A41DCA3F04008A1CBF /* ASPopupPresentSlideRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupPresentSlideRight.h; sourceTree = "<group>"; };
-		272A14A51DCA3F04008A1CBF /* ASPopupPresentSlideRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupPresentSlideRight.m; sourceTree = "<group>"; };
-		272A14A61DCA3F04008A1CBF /* ASPopupPresentSlideUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupPresentSlideUp.h; sourceTree = "<group>"; };
-		272A14A71DCA3F04008A1CBF /* ASPopupPresentSlideUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupPresentSlideUp.m; sourceTree = "<group>"; };
-		272A14A81DCA3F04008A1CBF /* ASPopupPresentSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupPresentSystem.h; sourceTree = "<group>"; };
-		272A14A91DCA3F04008A1CBF /* ASPopupPresentSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupPresentSystem.m; sourceTree = "<group>"; };
 		272A14AB1DCA3F04008A1CBF /* ASPopupAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupAction.h; sourceTree = "<group>"; };
 		272A14AC1DCA3F04008A1CBF /* ASPopupAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupAction.m; sourceTree = "<group>"; };
 		272A14AD1DCA3F04008A1CBF /* ASPopupController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ASPopupController.bundle; sourceTree = "<group>"; };
 		272A14AE1DCA3F04008A1CBF /* ASPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupView.h; sourceTree = "<group>"; };
 		272A14AF1DCA3F04008A1CBF /* ASPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupView.m; sourceTree = "<group>"; };
+		27FF06051DCB7CFD009B22BF /* ASPopupPresentAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupPresentAnimator.h; sourceTree = "<group>"; };
+		27FF06061DCB7CFD009B22BF /* ASPopupPresentAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupPresentAnimator.m; sourceTree = "<group>"; };
+		27FF06081DCB824E009B22BF /* ASPopupHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASPopupHeader.h; sourceTree = "<group>"; };
+		27FF06091DCB82EB009B22BF /* ASPopupDismissAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopupDismissAnimator.h; sourceTree = "<group>"; };
+		27FF060A1DCB82EB009B22BF /* ASPopupDismissAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopupDismissAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +103,7 @@
 			children = (
 				272A14861DCA3F04008A1CBF /* ASPopupController.h */,
 				272A14871DCA3F04008A1CBF /* ASPopupController.m */,
+				27FF06081DCB824E009B22BF /* ASPopupHeader.h */,
 				272A14881DCA3F04008A1CBF /* ASPopupDismissAnimator */,
 				272A14971DCA3F04008A1CBF /* ASPopupPresentAnimator */,
 				272A14AA1DCA3F04008A1CBF /* ASPopupView */,
@@ -155,20 +115,8 @@
 		272A14881DCA3F04008A1CBF /* ASPopupDismissAnimator */ = {
 			isa = PBXGroup;
 			children = (
-				272A14891DCA3F04008A1CBF /* ASPopupDismissContractHorizontal.h */,
-				272A148A1DCA3F04008A1CBF /* ASPopupDismissContractHorizontal.m */,
-				272A148B1DCA3F04008A1CBF /* ASPopupDismissContractVertical.h */,
-				272A148C1DCA3F04008A1CBF /* ASPopupDismissContractVertical.m */,
-				272A148D1DCA3F04008A1CBF /* ASPopupDismissFadeOut.h */,
-				272A148E1DCA3F04008A1CBF /* ASPopupDismissFadeOut.m */,
-				272A148F1DCA3F04008A1CBF /* ASPopupDismissSlideDown.h */,
-				272A14901DCA3F04008A1CBF /* ASPopupDismissSlideDown.m */,
-				272A14911DCA3F04008A1CBF /* ASPopupDismissSlideLeft.h */,
-				272A14921DCA3F04008A1CBF /* ASPopupDismissSlideLeft.m */,
-				272A14931DCA3F04008A1CBF /* ASPopupDismissSlideRight.h */,
-				272A14941DCA3F04008A1CBF /* ASPopupDismissSlideRight.m */,
-				272A14951DCA3F04008A1CBF /* ASPopupDismissSlideUp.h */,
-				272A14961DCA3F04008A1CBF /* ASPopupDismissSlideUp.m */,
+				27FF06091DCB82EB009B22BF /* ASPopupDismissAnimator.h */,
+				27FF060A1DCB82EB009B22BF /* ASPopupDismissAnimator.m */,
 			);
 			path = ASPopupDismissAnimator;
 			sourceTree = "<group>";
@@ -176,24 +124,8 @@
 		272A14971DCA3F04008A1CBF /* ASPopupPresentAnimator */ = {
 			isa = PBXGroup;
 			children = (
-				272A14981DCA3F04008A1CBF /* ASPopupPresentBounce.h */,
-				272A14991DCA3F04008A1CBF /* ASPopupPresentBounce.m */,
-				272A149A1DCA3F04008A1CBF /* ASPopupPresentExpandHorizontal.h */,
-				272A149B1DCA3F04008A1CBF /* ASPopupPresentExpandHorizontal.m */,
-				272A149C1DCA3F04008A1CBF /* ASPopupPresentExpandVertical.h */,
-				272A149D1DCA3F04008A1CBF /* ASPopupPresentExpandVertical.m */,
-				272A149E1DCA3F04008A1CBF /* ASPopupPresentFadeIn.h */,
-				272A149F1DCA3F04008A1CBF /* ASPopupPresentFadeIn.m */,
-				272A14A01DCA3F04008A1CBF /* ASPopupPresentSlideDown.h */,
-				272A14A11DCA3F04008A1CBF /* ASPopupPresentSlideDown.m */,
-				272A14A21DCA3F04008A1CBF /* ASPopupPresentSlideLeft.h */,
-				272A14A31DCA3F04008A1CBF /* ASPopupPresentSlideLeft.m */,
-				272A14A41DCA3F04008A1CBF /* ASPopupPresentSlideRight.h */,
-				272A14A51DCA3F04008A1CBF /* ASPopupPresentSlideRight.m */,
-				272A14A61DCA3F04008A1CBF /* ASPopupPresentSlideUp.h */,
-				272A14A71DCA3F04008A1CBF /* ASPopupPresentSlideUp.m */,
-				272A14A81DCA3F04008A1CBF /* ASPopupPresentSystem.h */,
-				272A14A91DCA3F04008A1CBF /* ASPopupPresentSystem.m */,
+				27FF06051DCB7CFD009B22BF /* ASPopupPresentAnimator.h */,
+				27FF06061DCB7CFD009B22BF /* ASPopupPresentAnimator.m */,
 			);
 			path = ASPopupPresentAnimator;
 			sourceTree = "<group>";
@@ -281,28 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272A14B51DCA3F04008A1CBF /* ASPopupDismissSlideLeft.m in Sources */,
-				272A14B31DCA3F04008A1CBF /* ASPopupDismissFadeOut.m in Sources */,
-				272A14B41DCA3F04008A1CBF /* ASPopupDismissSlideDown.m in Sources */,
-				272A14B21DCA3F04008A1CBF /* ASPopupDismissContractVertical.m in Sources */,
-				272A14BD1DCA3F04008A1CBF /* ASPopupPresentSlideLeft.m in Sources */,
-				272A14BE1DCA3F04008A1CBF /* ASPopupPresentSlideRight.m in Sources */,
+				27FF06071DCB7CFD009B22BF /* ASPopupPresentAnimator.m in Sources */,
 				272A14C11DCA3F04008A1CBF /* ASPopupAction.m in Sources */,
-				272A14BB1DCA3F04008A1CBF /* ASPopupPresentFadeIn.m in Sources */,
 				272A14841DCA3EFA008A1CBF /* DemoViewController.m in Sources */,
-				272A14BF1DCA3F04008A1CBF /* ASPopupPresentSlideUp.m in Sources */,
-				272A14BC1DCA3F04008A1CBF /* ASPopupPresentSlideDown.m in Sources */,
 				272A14701DCA3EDD008A1CBF /* AppDelegate.m in Sources */,
-				272A14BA1DCA3F04008A1CBF /* ASPopupPresentExpandVertical.m in Sources */,
-				272A14B81DCA3F04008A1CBF /* ASPopupPresentBounce.m in Sources */,
-				272A14B61DCA3F04008A1CBF /* ASPopupDismissSlideRight.m in Sources */,
-				272A14B11DCA3F04008A1CBF /* ASPopupDismissContractHorizontal.m in Sources */,
-				272A14B91DCA3F04008A1CBF /* ASPopupPresentExpandHorizontal.m in Sources */,
+				27FF060B1DCB82EB009B22BF /* ASPopupDismissAnimator.m in Sources */,
 				272A14B01DCA3F04008A1CBF /* ASPopupController.m in Sources */,
-				272A14B71DCA3F04008A1CBF /* ASPopupDismissSlideUp.m in Sources */,
 				272A14C31DCA3F04008A1CBF /* ASPopupView.m in Sources */,
 				272A146D1DCA3EDD008A1CBF /* main.m in Sources */,
-				272A14C01DCA3F04008A1CBF /* ASPopupPresentSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +371,7 @@
 				272A14811DCA3EDD008A1CBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
